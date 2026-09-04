@@ -17,7 +17,7 @@ go-to: start_menu_2
 
 
 @start
-on-arrival:
+on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
@@ -265,11 +265,11 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "<span style="color: #000000;">**Lübke**</span>";
-Q.president_party = '<span style="color: #000000;">**CDU**</span>';
+Q.president = "Lübke";
+Q.president_party = 'CDU';
 // starting chancellor: Kurt Georg Kiesinger
-Q.chancellor = "<span style="color: #000000;">**Kiesinger**</span>";
-Q.chancellor_party = '<span style="color: #000000;">**CDU**</span>';
+Q.chancellor = "Kiesinger";
+Q.chancellor_party = 'CDU';
 Q.spd_in_government = 1;
 Q.cdu_in_government = 1;
 Q.fdp_in_government = 0;
@@ -509,6 +509,7 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
+!}
 set-bg: img/map_2.jpg
 new-page: true
 
@@ -535,7 +536,7 @@ go-to: 1969_main
 
 @1969_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
-on-arrival:
+on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
@@ -551,6 +552,7 @@ Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 go-to: 1969_main
+!}
 
 @1969_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
