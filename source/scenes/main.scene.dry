@@ -1,5 +1,5 @@
 title: Next month
-set-bg: img/map_brd.jpeg
+set-bg: img/map_brd.jpg
 is-hand: true
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
