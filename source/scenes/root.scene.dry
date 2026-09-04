@@ -279,7 +279,7 @@ Q.in_right_coalition = 0;
 Q.in_weimar_coalition = 0;
 // Grand coalition = SPD + Z + BVP + DDP + DVP
 // also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
-Q.in_grand_coalition = 0;
+Q.in_grand_coalition = 1;
 // Popular front = SPD + KPD + Z + DDP
 Q.in_popular_front = 0;
 // left coalition = SPD + KPD + left-splinters
