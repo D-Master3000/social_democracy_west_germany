@@ -5,6 +5,7 @@ frequency: 1000
 max-visits: 1
 new-page: true
 on-arrival:
+tags: event
 
 @pres_election
 
