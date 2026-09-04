@@ -266,7 +266,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "<span style="color: #000000;">**Lübke**</span>";
-Q.president_party = '<span style="color: #000000;">**CDU**</span>'
+Q.president_party = '<span style="color: #000000;">**CDU**</span>';
 // starting chancellor: Kurt Georg Kiesinger
 Q.chancellor = "<span style="color: #000000;">**Kiesinger**</span>";
 Q.chancellor_party = '<span style="color: #000000;">**CDU**</span>';
