@@ -8,7 +8,7 @@ on-arrival: presidential_election_seen = 1;
 tags: event
 set-jump: pres_election
 
-@pres_election
+= Presidential Election
 
 The elections for the presidency are coming up. Who will we support?
 
