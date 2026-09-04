@@ -6,7 +6,6 @@ max-visits: 1
 new-page: true
 on-arrival: presidential_election_seen = 1;
 tags: event
-set-jump: pres_election
 
 = Presidential Election
 
