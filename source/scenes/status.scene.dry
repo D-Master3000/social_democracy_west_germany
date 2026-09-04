@@ -35,7 +35,7 @@ President: [? if president == "Lübke": <span style="color: #000000;">Lübke</sp
 
 Chancellor: [? if chancellor == "Kiesinger": <span style="color: #000000;">Kiesinger</span> ?][? if chancellor == "Brandt": <span style="color: #000000;">Brandt</span> ?] [? if chancellor_party == "CDU": (<span style="color: #000000;">**CDU**</span>) ?][? if chancellor_party == "SPD": (<span style="color: #000000;">**SPD**</span>= ?]
 
-Reichstag composition:
+Bundestag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
