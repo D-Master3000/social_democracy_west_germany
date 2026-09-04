@@ -1,12 +1,25 @@
 title: Presidential Election
 subtitle:
-view-if: year = 1969 and month == 3
+view-if: year = 1969 and month == 3 and presidential_election_seen = 0
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival:
+on-arrival: presidential_election_seen = 1;
 tags: event
 
 @pres_election
 
 The elections for the presidency are coming up. Who will we support?
+
+- @support_Schröder: Support Schröder.
+- @support_Heinemann: Run Heinemann of the SPD.
+
+@support_Schröder
+subtitle: We should pursue better relations with the CDU.
+
+We should pursue better relations with the CDU and support their candidate.
+
+@support_Heinemann
+subtitle: This is the default option.
+
+SPD on Top.
