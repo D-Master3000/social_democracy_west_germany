@@ -85,15 +85,8 @@ Q.leverage = Q.spd_r;
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
-Q.kpd_coalition_dissent = 0;
 Q.spd_in_government = 0;
-Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
-Q.in_left_front = 0;
-Q.in_popular_front = 0;
-Q.in_emergency_government = 0;
-Q.in_minority_government = 0;
-Q.in_unity_government = 0;
 Q.spd_toleration = 0;
 Q.spd_caretaker = 0;
 Q.foreign_minister_party = 'DVP';
@@ -218,58 +211,6 @@ on-arrival: chancellor = "Brandt"
 
 Willy Brandt has become chancellor of the SPD majority.
 
-@no_confidence_elections_new
-on-arrival: {!
-Q.in_emergency_government = 1;
-Q.no_majority_elections += 1;
-Q.next_election_month = Q.month + 6;
-Q.next_election_time = Q.time + 6;
-if (Q.next_election_month > 12) {
-    Q.next_election_month -= 12;
-    Q.next_election_year = Q.year + 1;
-} else {
-    Q.next_election_year = Q.year;
-}
-Q.pro_republic -= 5;
-Q.workers_spd -= 3;
-Q.new_middle_spd -= 3;
-Q.old_middle_spd -= 3;
-Q.rural_spd -= 3;
-Q.catholics_spd -= 3;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 3;
-Q.new_middle_nsdap += 3;
-Q.rural_nsdap += 3;
-Q.unemployed_nsdap += 5;
-if (Q.pro_republic < 45 && Q.pro_republic >= 38) {
-    Q.workers_spd -= 6;
-}
-if (Q.pro_republic < 38) {
-    Q.workers_spd *= 0.85;
-    Q.new_middle_spd -= 5;
-    Q.old_middle_spd -= 5;
-    Q.rural_spd -= 5;
-    Q.catholics_spd -= 3;
-    Q.workers_nsdap += 5;
-    Q.old_middle_nsdap += 5;
-    Q.new_middle_nsdap += 5;
-    Q.rural_nsdap += 5;
-    Q.unemployed_nsdap += 5;   
-}
-!}
-view-if: no_confidence_votes > 50
-
-The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
-
-
-@no_confidence_win
-view-if: no_confidence_votes <= 50
-on-arrival: in_minority_government = 1; in_emergency_government = 0;
-achievement: minderheitsregierung
-
-We have won the vote of no confidence, and are currently ruling under an SPD minority government. Now our task is to fix the country.
-
-
 @social_liberal_coalition
 title: We can form a Social-Liberal Coalition.
 subtitle: SPD + FDP ([+ social_liberal_coalition +]%)
@@ -306,67 +247,6 @@ go-to: ministries
 
 We can form a Grand Coalition with the CDU and CSU. The Union has more votes than us and gets the chancellory.
 
-@new_elections
-on-arrival: {!
-Q.next_election_month = Q.month + 3;
-Q.next_election_time = Q.time + 3;
-if (Q.next_election_month > 12) {
-    Q.next_election_month -= 12;
-    Q.next_election_year = Q.year + 1;
-} else {
-    Q.next_election_year = Q.year;
-}
-if (Q.chancellor == "Brüning") {
-    Q.z_relation -= 5;
-    Q.dvp_relation -= 5;
-}
-Q.pro_republic -= 8;
-Q.workers_spd -= 5;
-Q.new_middle_spd -= 5;
-Q.old_middle_spd -= 5;
-Q.rural_spd -= 5;
-Q.catholics_spd -= 3;
-Q.new_middle_dvp -= 8;
-Q.old_middle_dvp -= 8;
-Q.new_middle_ddp -= 5;
-Q.old_middle_ddp -= 10;
-Q.rural_dnvp -= 5;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 6;
-Q.new_middle_nsdap += 6;
-Q.rural_nsdap += 6;
-Q.unemployed_nsdap += 5;
-// Thresholds are kind of arbitrary - adjusted because of negative economic effects on pro_republic
-if (Q.pro_republic < 45 && Q.pro_republic >= 36) {
-    Q.workers_spd -= 6;
-}
-if (Q.pro_republic < 36) {
-    // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
-    Q.z_relation -= 5;
-    Q.dvp_relation -= 5;
-    Q.workers_spd *= 0.85;
-    Q.unemployed_spd -= 2;
-    Q.new_middle_spd -= 5;
-    Q.old_middle_spd -= 5;
-    Q.rural_spd -= 5;
-    Q.catholics_spd -= 3;
-    Q.workers_nsdap += 8;
-    Q.old_middle_nsdap += 8;
-    Q.new_middle_nsdap += 8;
-    Q.rural_nsdap += 8;
-    Q.unemployed_nsdap += 8;   
-}
-if (Q.far_right_coalition >= 50) {
-    Q.sa_strength += 100;
-    Q.sh_strength += 100;
-    Q.coup_progress += 3;
-}
-!}
-
-There is no path to a workable Reichstag majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
-
-The people's faith in democracy is shaken by this ordeal. Of course, the Nazis are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
-
 @grand_coalition_spd_lead
 on-arrival: leverage -= 15
 
@@ -387,7 +267,7 @@ Willy Brandt is voted Chancellor.
 
 @ministries
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
+We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area.
 
 - #mins_1928
 - #drop_mins_1928
