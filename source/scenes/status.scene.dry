@@ -31,9 +31,9 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [? if president == "Lübke": <span style="color: #000000;">Lübke</span> ?][? if president == "Heinemann": <span style="color: #C00000;">Heinemann</span> ?] ([? if president_party == "CDU": <span style="color: #000000;">**CDU**</span> ?][? if president_party == "SPD": <span style="color: #000000;">**SPD**</span> ?])
+President: [? if president == "Lübke": <span style="color: #000000;">Lübke</span> ?][? if president == "Heinemann": <span style="color: #C00000;">Heinemann</span> ?] [? if president_party == "CDU": (<span style="color: #000000;">**CDU**</span>) ?][? if president_party == "SPD": (<span style="color: #000000;">**SPD**</span>) ?])
 
-Chancellor: [? if chancellor == "Kiesinger": <span style="color: #000000;">Kiesinger</span> ?][? if chancellor == "Brandt": <span style="color: #000000;">Brandt</span> ?] ([? if chancellor_party == "CDU": <span style="color: #000000;">**CDU**</span> ?][? if chancellor_party == "SPD": <span style="color: #000000;">**SPD**</span> ?])
+Chancellor: [? if chancellor == "Kiesinger": <span style="color: #000000;">Kiesinger</span> ?][? if chancellor == "Brandt": <span style="color: #000000;">Brandt</span> ?] [? if chancellor_party == "CDU": (<span style="color: #000000;">**CDU**</span>) ?][? if chancellor_party == "SPD": (<span style="color: #000000;">**SPD**</span>= ?])
 
 Reichstag composition:
 
