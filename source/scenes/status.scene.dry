@@ -41,7 +41,7 @@ Reichstag composition:
 {!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Christian Democratic Union/Cristian Social Union">CDU + CSU</span>!}: [+ cdu_r +]%
+{!<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union">CDU + CSU</span>!}: [+ cdu_r +]%
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="Free Democratic Party">FDP</span>!}: [+ fdp_r +]%
 # 1928: 3, 1930: 18
