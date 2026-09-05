@@ -11,15 +11,66 @@ tags: event
 
 The elections for the presidency are coming up. Who will we support?
 
-- @support_Schroeder: Support Schröder.
-- @support_Heinemann: Run Heinemann of the SPD.
+- @Bundesversammlung
 
-@support_Schroeder
-subtitle: We should pursue better relations with the CDU.
+@Bundesversammlung
+on-display: {!
+data = []
 
-We should pursue better relations with the CDU and support their candidate.
+data.push({
+      "id": "spd",
+      "legend": "SPD",
+      "name": "SPD",
+      "seats": 449,
+});
 
-@support_Heinemann
-subtitle: This is the default option.
+data.push({
+      "id": "cdu",
+      "legend": "CDU",
+      "name": "CDU",
+      "seats": 385,
+});
 
-SPD on Top.
+data.push({
+      "id": "csu",
+      "legend": "CSU",
+      "name": "CSU",
+      "seats": 97,
+});
+
+data.push({
+      "id": "fdp",
+      "legend": "FDP",
+      "name": "FDP",
+      "seats": 83,
+});
+
+data.push({
+      "id": "npd",
+      "legend": "NPD",
+      "name": "NPD",
+      "seats": 22,
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("bundesversammlung").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#bundesversammlung").datum(data).call(parliament);
+}
+!}
+go-to: test
+
+@test
+
+test
