@@ -108,6 +108,8 @@ The <span style="color: #FFCC00;">liberals</span> have decided to support our ca
 
 @vote
 
+**First Round Results:**
+
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td>!}
 {!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,6%**
@@ -115,13 +117,13 @@ The <span style="color: #FFCC00;">liberals</span> have decided to support our ca
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,4% {!</td></tr>!}
 {!</table>!}
 
-**First Round Results:**
-
 Due to not all delegates arriving in Berlin and some abstaining, no one has reached an absolute majority! A second vote will be held.
 
 - @vote2: Results...
 
 @vote2
+
+**Second Round Results:**
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td>!}
@@ -130,8 +132,6 @@ Due to not all delegates arriving in Berlin and some abstaining, no one has reac
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,9% {!</td></tr>!}
 {!</table>!}
 
-**Second Round Results:**
-
 There still isn't any absolute majority. A third vote will be held, where a simple majority is enough to be elected.
 
 - @vote3: Results...
@@ -139,13 +139,13 @@ There still isn't any absolute majority. A third vote will be held, where a simp
 @vote3
 on-arrival: president = "Heinemann"
 
+**Third Round Results:**
+
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td>!}
 {!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,4%**
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,8% {!</td></tr>!}
 {!</table>!}
-
-**Third Round Results:**
 
 Gustav Heinemann of the <span style="color: #C00000;">**SPD**</span> has been elected president! Our successful cooperation with the <span style="color: #FFCC00;">liberals</span> has interesting implications for the next Bundestag election...
