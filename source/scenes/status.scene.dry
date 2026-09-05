@@ -67,11 +67,11 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Christian Democratic Union"><span style="color: #000000;">**CDU**</span></span>!}: [+ cdu_relation : relationships +]
+<span class="tooltip-text" title="Christian Democratic Union"><span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span></span>: [+ cdu_relation : relationships +]
 
-{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFCC00;">**FDP**</span></span>!}: [+ fdp_relation : relationships +]
+<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFCC00;">**FDP**</span></span>: [+ fdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National Democratic Party of Germany (Nazis)"><span style="color: #c26f2b;">**NPD**</span></span>!}: [+ npd_relation : relationships +]
+<span class="tooltip-text" title="National Democratic Party of Germany (Nazis)"><span style="color: #c26f2b;">**NPD**</span></span>: [+ npd_relation : relationships +]
 
 = Internal Factions of the SPD
 
@@ -89,7 +89,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Terrorist Groups
 
-{!<span class="tooltip-text" title="The Red Army Faction is a far left terrorist group"><span style="color: #700000;">RAF</span></span>!}
+{!<span class="tooltip-text" title="The Red Army Faction is a far left terrorist group"><span style="color: #700000;">RAF</span></span>!}: [+ raf_strength +]
 
 = Official military/paramilitaries
 
@@ -112,30 +112,30 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+<span style="color: #C00000;">**SPD**</span>: [+ spd_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-CDU + CSU: [+ cdu_votes +]%
+<span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ cdu_votes +]%
 
-FDP: [+ fdp_votes +]%
+<span style="color: #FFCC00;">**FDP**</span>: [+ fdp_votes +]%
 
-NPD: [+ npd_votes +]%
+<span style="color: #c26f2b;">**NPD**</span>: [+ npd_votes +]%
 
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, FDP: [+ workers_fdp_display +]%; NPD: [+ workers_npd_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: <span style="color: #C00000;">**SPD**</span>: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, FDP: [+ workers_fdp_display +]%; NPD: [+ workers_npd_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, CDU: [+ new_middle_cdu_display +]%, FDP: [+ new_middle_fdp_display +]%; NPD: [+ new_middle_npd_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: <span style="color: #C00000;">**SPD**</span>: [+ new_middle_spd_display +]%, CDU: [+ new_middle_cdu_display +]%, FDP: [+ new_middle_fdp_display +]%; NPD: [+ new_middle_npd_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, CDU: [+ old_middle_cdu_display +]%, FDP: [+ old_middle_fdp_display +]%; NPD: [+ old_middle_npd_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: <span style="color: #C00000;">**SPD**</span>: [+ old_middle_spd_display +]%, CDU: [+ old_middle_cdu_display +]%, FDP: [+ old_middle_fdp_display +]%; NPD: [+ old_middle_npd_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, CDU: [+ rural_cdu_display +]%, FDP: [+ rural_fdp_display +]%; NPD: [+ rural_npd_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: <span style="color: #C00000;">**SPD**</span>: [+ rural_spd_display +]%, CDU: [+ rural_cdu_display +]%, FDP: [+ rural_fdp_display +]%; NPD: [+ rural_npd_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, CDU: [+ unemployed_cdu_display +]%, FDP: [+ unemployed_fdp_display +]%; NPD: [+ unemployed_npd_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: <span style="color: #C00000;">**SPD**</span>: [+ unemployed_spd_display +]%, CDU: [+ unemployed_cdu_display +]%, FDP: [+ unemployed_fdp_display +]%; NPD: [+ unemployed_npd_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, FDP: [+ catholics_fdp_display +]%; NPD: [+ catholics_npd_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: <span style="color: #C00000;">**SPD**</span>: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, FDP: [+ catholics_fdp_display +]%; NPD: [+ catholics_npd_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
