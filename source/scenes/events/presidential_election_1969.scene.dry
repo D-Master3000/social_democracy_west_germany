@@ -9,9 +9,9 @@ tags: event
 
 = Presidential Election
 
-The elections for the presidency are coming up. Who will we support?
+The elections for the presidency are coming up. The president is, in contrast to Weimar, not voted directly by the people but by the Bundesversammlung. The Bundesversammlung is made up evenly of Bundestag members and representatives of the Landtags.
 
-- @Bundesversammlung: test
+- @Bundesversammlung: Let's see the composition of the Bundesversammlung.
 
 @Bundesversammlung
 on-display: {!
@@ -21,6 +21,12 @@ data.push({
       "legend": "SPD",
       "name": "SPD",
       "seats": 449,
+});
+data.push({
+      "id": "fdp",
+      "legend": "FDP",
+      "name": "FDP",
+      "seats": 83,
 });
 data.push({
       "id": "cdu",
@@ -33,12 +39,6 @@ data.push({
       "legend": "CSU",
       "name": "CSU",
       "seats": 97,
-});
-data.push({
-      "id": "fdp",
-      "legend": "FDP",
-      "name": "FDP",
-      "seats": 83,
 });
 data.push({
       "id": "npd",
@@ -64,7 +64,7 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
-go-to: test
+go-to: choose_candidate
 
 **Composition of the Bundesversammlung:**
 
@@ -74,17 +74,69 @@ go-to: test
 {!<tr><td>Party</td><td>Delegates Share</td>!}
 {!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **43,3%**
 
-{!<tr><td><div class="box" style='background-color:#000000'> </div> !}CDU: {!</td><td>!} 37,2%
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !}FDP: {!</td><td>!} 8% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#286fe0'> </div> !}CSU: {!</td><td>!} 9,3%
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}CDU: {!</td><td>!} 37,2% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !}FDP: {!</td><td>!} 8%
+{!<tr><td><div class="box" style='background-color:#286fe0'> </div> !}CSU: {!</td><td>!} 9,3% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#c26f2b'> </div> !}NPD: {!</td><td>!} 2,1%
+{!<tr><td><div class="box" style='background-color:#c26f2b'> </div> !}NPD: {!</td><td>!} 2,1% {!</td></tr>!}
 {!</table>!}
 
-@test
+@choose_candidate
 on-arrival: {!
 !}
 
-test
+Who should we run for president?
+
+- @Heinemann: Former <span style="color: #000000;">**CDU**</span> member, now justice minister of the <span style="color: #C00000;">**SPD**</span>
+
+@Heinemann
+
+We run Gustav Heinemann as our candidate.
+
+The <span style="color: #000000;">**CDU**</span> runs Gerhard Schröder, defense minister, as their candidate.
+
+- @FDP_choice: Who will the <span style="color: #FFCC00;">**FDP**</span> and <span style="color: #c26f2b;">**NPD**</span> support?
+
+@FDP_choice
+
+The <span style="color: #FFCC00;">liberals</span> have decided to support our candidate! The <span style="color: #c26f2b;">**NPD**</span> delegates seem to vote for Schröder...
+
+- @vote: Results...
+
+@vote
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote Share</td>!}
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,6%**
+
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} Gerhard Schröder: {!</td><td>!} 48,4% {!</td></tr>!}
+{!</table>!}
+
+Due to not all delegates arriving in Berlin and some abstaining, no one has reached an absolute majority! A second vote will be held.
+
+- @vote2: Results...
+
+@vote2
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote Share</td>!}
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,3%**
+
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} Gerhard Schröder: {!</td><td>!} 48,9% {!</td></tr>!}
+{!</table>!}
+
+There still isn't any absolute majority. A third vote will be held, where a simple majority is enough to be elected.
+
+- @vote2: Results...
+
+@vote3
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote Share</td>!}
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,4%**
+
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} Gerhard Schröder: {!</td><td>!} 48,8% {!</td></tr>!}
+{!</table>!}
+
+Gustav Heinemann of the <span style="color: #C00000;">**SPD**</span> has been elected president! Our successful cooperation with the <span style="color: #FFCC00;">liberals</span> has interesting implications for the next Bundestag election...
