@@ -72,7 +72,7 @@ go-to: choose_candidate
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Delegates Share</td>!}
-{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **43,3%**
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **43,3%** {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !}FDP: {!</td><td>!} 8% {!</td></tr>!}
 
