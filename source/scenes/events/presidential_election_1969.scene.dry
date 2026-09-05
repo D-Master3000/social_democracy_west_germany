@@ -137,7 +137,7 @@ There still isn't any absolute majority. A third vote will be held, where a simp
 - @vote3: Results...
 
 @vote3
-on-arrival: president = "Heinemann"
+on-arrival: president = "Heinemann"; president_party = "SPD"
 
 **Third Round Results:**
 
