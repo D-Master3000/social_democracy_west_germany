@@ -40,7 +40,7 @@ Bundestag composition:
 # 1928: 30, 1930: 25, 1932: 22
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
 # 1928: 15, 1930: 15, 1932: 
-<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union"><span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**BVP**</span></span>?]</span>: [+ cdu_r +]%
+<span class="tooltip-text" title="Christian Democratic Union/Christian Social Union"><span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**BVP**</span></span>: [+ cdu_r +]%
 # 1928: 9, 1930: 5
 <span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFCC00;">**FDP**</span></span>: [+ fdp_r +]%
 # 1928: 3, 1930: 18
