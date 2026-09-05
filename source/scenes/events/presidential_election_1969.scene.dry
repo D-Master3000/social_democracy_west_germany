@@ -115,6 +115,8 @@ The <span style="color: #FFCC00;">liberals</span> have decided to support our ca
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,4% {!</td></tr>!}
 {!</table>!}
 
+**First Round Results:**
+
 Due to not all delegates arriving in Berlin and some abstaining, no one has reached an absolute majority! A second vote will be held.
 
 - @vote2: Results...
@@ -127,6 +129,8 @@ Due to not all delegates arriving in Berlin and some abstaining, no one has reac
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,9% {!</td></tr>!}
 {!</table>!}
+
+**Second Round Results:**
 
 There still isn't any absolute majority. A third vote will be held, where a simple majority is enough to be elected.
 
@@ -141,5 +145,7 @@ on-arrival: president = "Heinemann"
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,8% {!</td></tr>!}
 {!</table>!}
+
+**Third Round Results:**
 
 Gustav Heinemann of the <span style="color: #C00000;">**SPD**</span> has been elected president! Our successful cooperation with the <span style="color: #FFCC00;">liberals</span> has interesting implications for the next Bundestag election...
