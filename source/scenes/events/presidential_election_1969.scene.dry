@@ -66,6 +66,25 @@ if (window && d3) {
 !}
 go-to: test
 
+**Composition of the Bundesversammlung:**
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Delegates Share</td>!}
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **43,3%**
+
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}CDU: {!</td><td>!} 37,2%
+
+{!<tr><td><div class="box" style='background-color:#286fe0'> </div> !}CSU: {!</td><td>!} 9,3%
+
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !}FDP: {!</td><td>!} 8%
+
+{!<tr><td><div class="box" style='background-color:#c26f2b'> </div> !}NPD: {!</td><td>!} 2,1%
+{!</table>!}
+
 @test
+on-arrival: {!
+!}
 
 test
