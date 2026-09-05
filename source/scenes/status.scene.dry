@@ -67,11 +67,11 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Christian Democratic Union">CDU</span>!}: [+ cdu_relation : relationships +]
+{!<span class="tooltip-text" title="Christian Democratic Union"><span style="color: #000000;">**CDU**</span></span>!}: [+ cdu_relation : relationships +]
 
-{!<span class="tooltip-text" title="Free Democratic Party">FDP</span>!}: [+ fdp_relation : relationships +]
+{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFCC00;">**FDP**</span></span>!}: [+ fdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National Democratic Party of Germany (Nazis)">NPD</span>!}: [+ npd_relation : relationships +]
+{!<span class="tooltip-text" title="National Democratic Party of Germany (Nazis)"><span style="color: #c26f2b;">**NPD**</span></span>!}: [+ npd_relation : relationships +]
 
 = Internal Factions of the SPD
 
@@ -85,7 +85,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
-@defense
+@paramilitaries
 
 = Terrorist Groups
 
