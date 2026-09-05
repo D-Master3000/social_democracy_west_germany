@@ -44,7 +44,7 @@ Bundestag composition:
 # 1928: 9, 1930: 5
 <span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFCC00;">**FDP**</span></span>: [+ fdp_r +]%
 # 1928: 3, 1930: 18
-<span class="tooltip-text" title="National Democratic Party (Nazis)"><span style="color: #ab652c;">**NPD**</span></span>: [+ npd_r +]%
+<span class="tooltip-text" title="National Democratic Party (Nazis)"><span style="color: #c26f2b;">**NPD**</span></span>: [+ npd_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
