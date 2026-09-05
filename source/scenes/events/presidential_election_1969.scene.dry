@@ -9,7 +9,7 @@ tags: event
 
 = Presidential Election
 
-The elections for the presidency are coming up. The president is, in contrast to Weimar, not voted directly by the people but by the Bundesversammlung. The Bundesversammlung is made up evenly of Bundestag members and representatives of the Landtags.
+The elections for the presidency are coming up. The president is, in contrast to Weimar, not voted directly by the people, but by the Bundesversammlung. The Bundesversammlung is made up evenly of Bundestag members and representatives of the Landtags.
 
 - @Bundesversammlung: Let's see the composition of the Bundesversammlung.
 
@@ -89,13 +89,14 @@ on-arrival: {!
 
 Who should we run for president?
 
-- @Heinemann: Former <span style="color: #000000;">**CDU**</span> member, now justice minister of the <span style="color: #C00000;">**SPD**</span>
+- @Heinemann: Gustav Heinemann
 
 @Heinemann
+subtitle: Former <span style="color: #000000;">**CDU**</span> member, now justice minister of the <span style="color: #C00000;">**SPD**</span>
 
 We run Gustav Heinemann as our candidate.
 
-The <span style="color: #000000;">**CDU**</span> runs Gerhard Schröder, defense minister, as their candidate.
+The <span style="color: #000000;">**CDU**</span> runs Gerhard Schröder, the defense minister, as their candidate.
 
 - @FDP_choice: Who will the <span style="color: #FFCC00;">**FDP**</span> and <span style="color: #c26f2b;">**NPD**</span> support?
 
@@ -111,7 +112,7 @@ The <span style="color: #FFCC00;">liberals</span> have decided to support our ca
 {!<tr><td>Party</td><td>Vote Share</td>!}
 {!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,6%**
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} Gerhard Schröder: {!</td><td>!} 48,4% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,4% {!</td></tr>!}
 {!</table>!}
 
 Due to not all delegates arriving in Berlin and some abstaining, no one has reached an absolute majority! A second vote will be held.
@@ -124,7 +125,7 @@ Due to not all delegates arriving in Berlin and some abstaining, no one has reac
 {!<tr><td>Party</td><td>Vote Share</td>!}
 {!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,3%**
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} Gerhard Schröder: {!</td><td>!} 48,9% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,9% {!</td></tr>!}
 {!</table>!}
 
 There still isn't any absolute majority. A third vote will be held, where a simple majority is enough to be elected.
@@ -132,12 +133,13 @@ There still isn't any absolute majority. A third vote will be held, where a simp
 - @vote2: Results...
 
 @vote3
+on-arrival: president = "Heinemann"
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote Share</td>!}
 {!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **49,4%**
 
-{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} Gerhard Schröder: {!</td><td>!} 48,8% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 48,8% {!</td></tr>!}
 {!</table>!}
 
 Gustav Heinemann of the <span style="color: #C00000;">**SPD**</span> has been elected president! Our successful cooperation with the <span style="color: #FFCC00;">liberals</span> has interesting implications for the next Bundestag election...
