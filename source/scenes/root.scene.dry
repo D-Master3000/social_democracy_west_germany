@@ -143,11 +143,11 @@ Q.sh_leader_party = "CDU";
 Q.sh_coalition = "Bourgeois Coalition";
 
 Q.bundeskriminalamt_strength = 8.5;
-Q.bundeskriminalamt_loyalty = 0.4;
+Q.bundeskriminalamt_loyalty = 0.5;
 
-Q.Bundeswehr_strength = 450;
-Q.Bundeswehr_militancy = 5;
-Q.Bundeswehr_loyalty = 0.4;
+Q.bundeswehr_strength = 450;
+Q.bundeswehr_militancy = 5;
+Q.bundeswehr_loyalty = 0.5;
 
 // The state of the country
 
