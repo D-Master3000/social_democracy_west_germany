@@ -73,6 +73,16 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="National Democratic Party of Germany (Nazis)"><span style="color: #c26f2b;">**NPD**</span></span>: [+ npd_relation : relationships +]
 
+= Party Leadership
+
+<span style="color: #C00000;">**SPD**</span>: [+ spd_ideology +] ([+ spd_leader +])
+
+<span style="color: #000000;">**CDU**</span>: [+ cdu_ideology +] ([+ cdu_leader +])
+
+<span style="color: #FFCC00;">**FDP**</span>: [+ fdp_ideology +] ([+ fdp_leader +])
+
+<span style="color: #c26f2b;">**NPD**</span>: [+ npd_ideology +] ([+ npd_leader +])
+
 = Internal Factions of the SPD
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
@@ -91,7 +101,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Red Army Faction is a far left terrorist group"><span style="color: #700000;">RAF</span></span>!}: [+ raf_strength +]
 
-= Official military/paramilitaries
+= Official military/police
 
 Bundeswehr: [+ bundeswehr_strength +] thousand troops.
 
@@ -114,8 +124,6 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 <span style="color: #C00000;">**SPD**</span>: [+ spd_votes +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
-
 <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ cdu_votes +]%
 
 <span style="color: #FFCC00;">**FDP**</span>: [+ fdp_votes +]%
@@ -124,18 +132,19 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 Others: [+ other_votes +]%
 
+Support for the <span style="color: #000000;">Re</span><span style="color: #C00000;">pub</span><span style="color: #FFCC00;">lic</span>: [+ pro_republic_disp +]%
+
+Support for <span style="color: #9B0000;">**Socialism**</span>: [+ socialism_disp +]%
+
+Support for <span style="color: #3E88B3;">**Nationalism**</span>: [+ nationalism_disp +]%
+
 **Detailed results for each demographic**
 
-Workers: <span style="color: #C00000;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ workers_npd_display +]%, Others: [+ workers_other_display +]%
+Blue Collar Workers: <span style="color: #C00000;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ workers_npd_display +]%, Others: [+ workers_other_display +]%
 
-New Middle Class: <span style="color: #C00000;">**SPD**</span>: [+ new_middle_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ new_middle_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ new_middle_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ new_middle_npd_display +]%, Others: [+ new_middle_other_display +]%
+White Collar Workers + Beamte: <span style="color: #C00000;">**SPD**</span>: [+ new_middle_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ new_middle_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ new_middle_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ new_middle_npd_display +]%, Others: [+ new_middle_other_display +]%
 
-Old Middle Class: <span style="color: #C00000;">**SPD**</span>: [+ old_middle_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ old_middle_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ old_middle_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ old_middle_npd_display +]%, Others: [+ old_middle_other_display +]%
+Self Employed: <span style="color: #C00000;">**SPD**</span>: [+ old_middle_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ old_middle_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ old_middle_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ old_middle_npd_display +]%, Others: [+ old_middle_other_display +]%
 
 Rural: <span style="color: #C00000;">**SPD**</span>: [+ rural_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ rural_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ rural_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ rural_npd_display +]%, Others: [+ rural_other_display +]%
 
-Unemployed: <span style="color: #C00000;">**SPD**</span>: [+ unemployed_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ unemployed_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ unemployed_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ unemployed_npd_display +]%, Others: [+ unemployed_other_display +]%
-
-Catholics: <span style="color: #C00000;">**SPD**</span>: [+ catholics_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ catholics_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ catholics_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ catholics_npd_display +]%, Others: [+ catholics_other_display +]%
-
-Support for the Republic: [+ pro_republic_disp +]%
