@@ -85,15 +85,13 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+<span class="tooltip-text" title="The marxist New Left, composed mostly of the youth wing, pushes for Systemüberwindung, radical and structural reforms to end capitalism."><span style="color: #9B0000;">**New Left**</span></span> strength: [+ new_left_strength : strength +], dissent: [+ new_left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+<span class="tooltip-text" title="Democratic Socialists are in the center of the party. They support gradual reform of capitalism towards socialism, a strong welfare state and workers' rights."><span style="color: #C00000;">**Democratic Socialists**</span></span> strength: [+ democratic_socialist_strength : strength +], dissent: [+ democratic_socialist_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+<span class="tooltip-text" title="The trade unions' goals is economic reform and benefits for organized workers."><span style="color: #A52A2A;">**Trade Unionists**</span></span> strength: [+ trade_unionist_strength : strength +], dissent: [+ trade_unionist_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+<span class="tooltip-text" title="Pragmatists embraced the Godesberg consensus, the social market economy and cold-war Atlanticist alliances to maximize electoral appeal."><span style="color: #de6a70;">**Pragmatists**</span></span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
 
 @paramilitaries
 
@@ -132,7 +130,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 Others: [+ other_votes +]%
 
-Support for the <span style="color: #000000;">Re</span><span style="color: #C00000;">pub</span><span style="color: #FFCC00;">lic</span>: [+ pro_republic_disp +]%
+Support for the <span style="color: #000000;">**Re**</span><span style="color: #C00000;">**pub**</span><span style="color: #FFCC00;">**lic**</span>: [+ pro_republic_disp +]%
 
 Support for <span style="color: #9B0000;">**Socialism**</span>: [+ socialism_disp +]%
 
@@ -142,9 +140,9 @@ Support for <span style="color: #3E88B3;">**Nationalism**</span>: [+ nationalism
 
 Blue Collar Workers: <span style="color: #C00000;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ workers_npd_display +]%, Others: [+ workers_other_display +]%
 
-White Collar Workers + Beamte: <span style="color: #C00000;">**SPD**</span>: [+ new_middle_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ new_middle_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ new_middle_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ new_middle_npd_display +]%, Others: [+ new_middle_other_display +]%
+White Collar Workers + Beamte: <span style="color: #C00000;">**SPD**</span>: [+ white_collar_workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ white_collar_workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ white_collar_workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ white_collar_workers_display +]%, Others: [+ white_collar_workers_other_display +]%
 
-Self Employed: <span style="color: #C00000;">**SPD**</span>: [+ old_middle_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ old_middle_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ old_middle_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ old_middle_npd_display +]%, Others: [+ old_middle_other_display +]%
+Self Employed: <span style="color: #C00000;">**SPD**</span>: [+ self_employed_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ self_employed_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ self_employed_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ self_employed_npd_display +]%, Others: [+ self_employed_other_display +]%
 
 Rural: <span style="color: #C00000;">**SPD**</span>: [+ rural_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ rural_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ rural_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ rural_npd_display +]%, Others: [+ rural_other_display +]%
 
