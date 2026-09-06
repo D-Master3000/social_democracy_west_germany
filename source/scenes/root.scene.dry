@@ -11,7 +11,6 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start: Start game
-- @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
 
@@ -46,51 +45,30 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
+Q.factions = ['new left', 'democratic socialists', 'trade unionists', 'pragmatists'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.new_left_strength = 15;
+Q.new_left_dissent = 20;
+Q.democratic_socialist_strength = 30;
+Q.democratic_socialist_dissent = 0;
+Q.trade_unionist_strength = 25;
+Q.trade_unionist_dissent = 5;
+Q.pragmatist_strength = 25;
+Q.pragmatist_dissent = 5;
 
 // secret events...
 Q.unions_independent = 0;
-Q.centrists_resign = 0;
 Q.left_split = 0;
-Q.reformists_resigned = 0;
+Q.center_resign = 0;
+Q.right_split = 0;
 
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
-Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
 // radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
-// Support for the WTB plan and proto-Keynesian works creation plans in general
-Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
+// Support for Pacifism within the SPD
 Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
-Q.democratization = 0;
-// Support for a communist coalition relative to 1928
-Q.communist_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
-// 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
 Q.economic_plan = 0;
-// have we officially adopted the WTB plan?
-Q.wtb_adopted = 0;
-// have we formed the iron front?
-Q.iron_front_formed = 0;
-// people's party support
-Q.peoples_party_support = 0;
 // support for nationalizations
 Q.nationalization_support = 0;
 Q.nationalization_adopted = 0;
@@ -102,48 +80,88 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.cdu_relation = 50;
-Q.fdp_relation = 50;
+Q.fdp_relation = 60;
 // The NPD is invariably hostile
 Q.npd_relation = 0;
 
-Q.z_leader = "Brüning";
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+Q.spd_leader = "Brandt";
+Q.spd_ideology = "Democratic Socialism";
+Q.cdu_leader = "Kiesinger";
+Q.cdu_ideology = "Christian Democracy";
+Q.fdp_leader = "Scheel";
+Q.fdp_ideology = "Left Liberalism";
+// His first name is Adolf, some things never change
+Q.npd_leader = "von Thadden";
+Q.npd_ideology = "National Socialism";
 
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+// Where is the SPD in government?
+Q.spd_bw = 1;
+Q.spd_ba = 0;
+Q.spd_be = 1;
+Q.spd_br = 1;
+Q.spd_ha = 1;
+Q.spd_he = 1;
+Q.spd_ns = 1;
+Q.spd_nw = 1;
+Q.spd_rp = 0;
+Q.spd_sa = 0;
+Q.spd_sh = 0;
 
-Q.interior_police_strength = 50;
-Q.interior_police_militancy = 1;
-Q.interior_police_loyalty = 0.45;
+//Bundesländer governments
+Q.bw_leader = "Filbinger";
+Q.bw_leader_party = "CDU";
+Q.bw_coalition = "Grand Coalition";
+Q.ba_leader = "Goppel";
+Q.ba_leader_party = "CSU";
+Q.ba_coalition = "CSU majority";
+Q.be_leader = "Schütz";
+Q.be_leader_party = "SPD";
+Q.be_coalition = "Social-liberal Coalition";
+Q.br_leader = "Koschnick";
+Q.br_leader_party = "SPD";
+Q.br_coalition = "Social-liberal Coalition";
+Q.ha_leader = "Weichmann";
+Q.ha_leader_party = "SPD";
+Q.ha_coalition = "SPD majority";
+Q.he_leader = "Zinn";
+Q.he_leader_party = "SPD";
+Q.he_coalition = "SPD majority";
+Q.ns_leader = "Diederichs";
+Q.ns_leader_party = "SPD";
+Q.ns_coalition = "Grand Coalition";
+Q.nw_leader = "Kühn";
+Q.nw_leader_party = "SPD";
+Q.nw_coalition = "Social-liberal Coalition";
+Q.rp_leader = "Altmeier";
+Q.rp_leader_party = "CDU";
+Q.rp_coalition = "Bourgeois Coalition";
+Q.sa_leader = "Röder";
+Q.sa_leader_party = "CDU";
+Q.sa_coalition = "Bourgeois Coalition";
+Q.sh_leader = "Lemke";
+Q.sh_leader_party = "CDU";
+Q.sh_coalition = "Bourgeois Coalition";
 
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
+Q.bundeskriminalamt_strength = 8.5;
+Q.bundeskriminalamt_loyalty = 0.4;
 
-// strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
-Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.Bundeswehr_strength = 450;
+Q.Bundeswehr_militancy = 5;
+Q.Bundeswehr_loyalty = 0.4;
 
 // The state of the country
 
 // popular opinion
 // national ideology - on a binary scale
 // nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
+Q.nationalism = 50;
 // socialism vs capitalism
 Q.socialism = 40;
 // pro-republic vs anti-republic
-Q.pro_republic = 59;
-
-Q.emergency_rule = 0;
+Q.pro_republic = 80;
 
 // minimum percentage of votes to be represented in the Reichstag
 Q.electoral_threshold = 5;
-Q.nsdap_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
@@ -153,21 +171,11 @@ Q.capital_strike_progress = 0;
 Q.budget = 4;
 
 // Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
+// source: https://www.bpb.de/kurz-knapp/zahlen-und-fakten/soziale-situation-in-deutschland/61694/erwerbstaetige-nach-stellung-im-beruf/
 Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
-
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
-Q.income = 1600;
-// what about incomes for different classes? rural workers? middle-class workers?
+Q.self_employed = 10; // "old mittelstand"
+Q.white_collar_workers = 34; // "new mittelstand"
+Q.rural = 8;
 
 // inflation (in %) - source: https://www.finanz.de/ratgeber/inflation/
 Q.inflation = 1.91;
@@ -178,64 +186,38 @@ Q.economic_growth = 7.5;
 // economic expansion timer
 Q.economic_expansion = 0;
 
-// quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
-Q.workers_qol = 100;
-Q.rural_qol = 100;
-Q.unemployed_qol = 100;
-Q.old_middle_qol = 100;
-Q.new_middle_qol = 100;
-
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'self_employed', 'white_collar_workers', 'rural'];
 Q.parties = ['spd', 'cdu', 'fdp', 'npd', 'other'];
-
-// TODO: add 'sapd' later on
-Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_cdu = 5;
-Q.workers_fdp = 0;
-Q.workers_npd = 0;
-Q.workers_other = 10;
+Q.workers_spd = 58;
+Q.workers_cdu = 35;
+Q.workers_fdp = 3;
+Q.workers_npd = 3;
+Q.workers_other = 1;
 
-Q.old_middle_spd = 5;
-Q.old_middle_cdu = 5;
-Q.old_middle_fdp= 10;
-Q.old_middle_npd = 10;
-Q.old_middle_other = 10;
+Q.self_employed_spd = 22;
+Q.self_employed_cdu = 58;
+Q.self_employed_fdp= 11;
+Q.self_employed_npd = 8;
+Q.self_employed_other = 1;
 
-Q.new_middle_spd = 5;
-Q.new_middle_cdu = 10;
-Q.new_middle_fdp= 25;
-Q.new_middle_npd = 5;
-Q.new_middle_other = 15;
+Q.white_collar_workers_spd = 46;
+Q.white_collar_workers_cdu = 45;
+Q.white_collar_workers_fdp= 6;
+Q.white_collar_workers_npd = 2.5;
+Q.white_collar_workers_other = 0.5;
 
 Q.rural_spd = 10;
-Q.rural_cdu = 5;
+Q.rural_cdu = 78;
 Q.rural_fdp= 5;
-Q.rural_npd = 5;
-Q.rural_other = 10;
+Q.rural_npd = 6;
+Q.rural_other = 1;
 
-Q.unemployed_spd = 25;
-Q.unemployed_cdu = 1;
-Q.unemployed_fdp = 0;
-Q.unemployed_npd = 15;
-Q.unemployed_other = 9;
-
-Q.catholics_spd = 15;
-Q.catholics_cdu = 50;
-Q.catholics_fdp = 0;
-Q.catholics_npd = 0;
-Q.catholics_other = 12;
-
-
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
+// Current Bundestag composition
+// % of Bundestag in 1969
 // source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
 Q.spd_r = 40.7;
 Q.cdu_r = 49.4;
 Q.fdp_r = 9.9;
@@ -248,13 +230,6 @@ Q.old_cdu_r = 48.5;
 Q.old_fdp_r = 13.4;
 Q.old_npd_r = 0;
 Q.old_other_r = 0;
-
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
-
-// for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -275,63 +250,35 @@ Q.cdu_in_government = 1;
 Q.fdp_in_government = 0;
 Q.npd_in_government = 0;
 
-Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
-Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
+// Social-liberal coalition = SPD + FDP
+Q.social_liberal_coalition = 0;
+// Grand coalition = SPD + CDU/CSU
 Q.in_grand_coalition = 1;
-// Popular front = SPD + KPD + Z + DDP
-Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
-Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
-Q.in_emergency_government = 0;
 Q.in_spd_majority = 0;
-Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
-Q.in_minority_government = 0;
-// national unity governmet
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
-
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
-
-// is the current government a presidential minority government?
-Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+// starting with the Kiesinger cabinett https://de.wikipedia.org/wiki/Kabinett_Kiesinger
+Q.foreign_minister = 'Brandt';
+Q.foreign_minister_party = 'SPD';
+Q.interior_minister = 'Benda';
+Q.interior_minister_party = 'CDU';
+Q.justice_minister = 'Heinemann';
+Q.justice_minister_party = 'SPD';
+Q.labor_minister = 'Katzer';
+Q.labor_minister_party = 'CDU';
+Q.defense_minister = 'Schröder';
+Q.defense_minister_party = 'CDU';
+Q.economic_minister = 'Schiller';
+Q.economic_minister_party = 'SPD';
+Q.finance_minister = 'Strauß';
+Q.finance_minister_party = 'CSU';
+Q.agriculture_minister = 'Höcherl';
+Q.agriculture_minister_party = 'CSU';
 
 // Events: what has occurred?
-Q.panzerkreuzer_seen = 0;
-Q.panzerkreuzer_funded = 0;
-Q.panzerkreuzer_failed = 0;
-Q.unemployment_insurance_seen = 0;
-// unemployment insurance event is seen if the unemployment level is at least 4 more than the threshold...
-Q.unemployment_insurance_threshold = 10;
-Q.blutmai = 0;
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
@@ -378,7 +325,7 @@ Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 Q.tariffs = 0;
 
-Q.electoral_threshold = 0;
+Q.electoral_threshold = 5;
 
 // our conduct in the government, and the conduct of our coalition opponents.
 // did the SPD vote against the previous government in a vote of no confidence?
@@ -521,10 +468,7 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1969_easy: Begin (easy difficulty)
 - @1969_main: Begin (normal difficulty)
-- @1969_hard: Begin (hard difficulty)
-- @1969_historical: Begin (historical mode)
 
 @1969_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
