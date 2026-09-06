@@ -83,15 +83,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #c26f2b;">**NPD**</span>: [+ npd_ideology +] ([+ npd_leader +])
 
-= Internal Factions of the SPD
+= Internal Factions of the <span style="color: #C00000;">**SPD**</span>
 
-<span class="tooltip-text" title="The marxist New Left, composed mostly of the youth wing, pushes for Systemüberwindung, radical and structural reforms to end capitalism."><span style="color: #9B0000;">**New Left**</span></span> strength: [+ new_left_strength : strength +], dissent: [+ new_left_dissent : dissent +]
+<span class="tooltip-text" title="The marxist New Left, composed mostly of the youth wing, pushes for Systemüberwindung, radical and structural reforms to end capitalism."><span style="color: #880e4f;">**New Left**</span></span> strength: [+ new_left_strength : strength +], dissent: [+ new_left_dissent : dissent +]
 
 <span class="tooltip-text" title="Democratic Socialists are in the center of the party. They support gradual reform of capitalism towards socialism, a strong welfare state and workers' rights."><span style="color: #C00000;">**Democratic Socialists**</span></span> strength: [+ democratic_socialist_strength : strength +], dissent: [+ democratic_socialist_dissent : dissent +]
 
-<span class="tooltip-text" title="The trade unions' goals is economic reform and benefits for organized workers."><span style="color: #A52A2A;">**Trade Unionists**</span></span> strength: [+ trade_unionist_strength : strength +], dissent: [+ trade_unionist_dissent : dissent +]
+<span class="tooltip-text" title="The trade unions' goals are economic reform and benefits for organized workers."><span style="color: #E53935;">**Trade Unionists**</span></span> strength: [+ trade_unionist_strength : strength +], dissent: [+ trade_unionist_dissent : dissent +]
 
-<span class="tooltip-text" title="Pragmatists embraced the Godesberg consensus, the social market economy and cold-war Atlanticist alliances to maximize electoral appeal."><span style="color: #de6a70;">**Pragmatists**</span></span>!} strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
+<span class="tooltip-text" title="Pragmatists embraced the Godesberg consensus, the social market economy and cold-war Atlanticist alliances to maximize electoral appeal."><span style="color: #de6a70;">**Pragmatists**</span></span> strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
 
 @paramilitaries
 
