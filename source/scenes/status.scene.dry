@@ -85,7 +85,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the <span style="color: #C00000;">**SPD**</span>
 
-<span class="tooltip-text" title="The marxist New Left, composed mostly of the youth wing, pushes for Systemüberwindung, radical and structural reforms to end capitalism."><span style="color: #880e4f;">**New Left**</span></span> strength: [+ new_left_strength : strength +], dissent: [+ new_left_dissent : dissent +]
+<span class="tooltip-text" title="The marxist New Left, composed mostly of the youth wing, pushes for Systemüberwindung, radical and structural reforms to end capitalism."><span style="color: #94195b;">**New Left**</span></span> strength: [+ new_left_strength : strength +], dissent: [+ new_left_dissent : dissent +]
 
 <span class="tooltip-text" title="Democratic Socialists are in the center of the party. They support gradual reform of capitalism towards socialism, a strong welfare state and workers' rights."><span style="color: #A52A2A;">**Democratic Socialists**</span></span> strength: [+ democratic_socialist_strength : strength +], dissent: [+ democratic_socialist_dissent : dissent +]
 
