@@ -286,7 +286,7 @@ if (Q.month_actions >= 1) {
     }
 
     ////////////////////////// annual support changes
-    #WIP
+    // WIP
 
 
     // prevent forever support if the economy is bad
