@@ -14,55 +14,55 @@ The SPD is torn between many different ideological currents. What should be our 
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of workers.
-- @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+- @leftist: Class struggle, Anti-imperialism and radical transformation towards socialism are our primary goals.
+- @democratic_socialist: Democratic Socialism should be the party's goal.
+- @trade_unionist: We should work with the trade unions to improve the lives of workers.
+- @reform: As a Volkspartei, we should work for center left policies and support the social market economy.
 - @easy_discard
 
-@class_struggle
+@leftist
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
+on-departure: ideology = "left"; new_left_strength += 10; left_dissent -= 5; cdu_relation -= 10; fdp_relation -= 5; nationalization_support += 1; pragmatist_dissent += 5;
 
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
+The <span style="color: #94195b;">radical Left</span> of the party supports a course of class struggle and our identity of being a workers' party.
 
-@centrist
+@democratic_socialist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "centrist") {
+if (Q.ideology && Q.ideology != "democratic_socialist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
+on-departure: ideology = "democratic_socialist"; democratic_socialist_strength += 10; democratic_socialist_dissent -= 10; new_left_dissent -= 5; pragmatist_dissent -= 5
 
-The Center Marxists, represented by Kautsky and Hilferding, support a middle course of preparing for revolution while building up the consciousness of the working class.
+The <span style="color: #A52A2A;">Democratic Socialists</span> support a centrist position within the party, aiming to achieve socialism by gradually reforming capitalism.
 
-@labor
+@trade_unionist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "labor") {
+if (Q.ideology && Q.ideology != "trade_unionist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
+on-departure: ideology = "trade_unionist"; trade_unionist_strength += 10; trade_unionist_dissent -= 5;
 
-The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
+The <span style="color: #E53935;">trade unionist</span> wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
 
-@reform
+@pragmatist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "reformist") {
+if (Q.ideology && Q.ideology != "pragmatist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
+on-departure: ideology = "pragmatist"; pragmatist_strength += 10; pragmatist_dissent -= 5; cdu_relation += 5; fdp_relation += 5; new_left_dissent += 5
 
-The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+The <span style="color: #de6a70;">pragmatist</span> wing of the party embraced the shift to a Volkspartei, aims to make the social market economy fairer and is most supportive of coalitions with the bourgeois parties.
 
 @changed
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
