@@ -65,6 +65,6 @@ on-departure: ideology = "pragmatist"; pragmatist_strength += 10; pragmatist_dis
 The <span style="color: #de6a70;">pragmatist</span> wing of the party embraced the shift to a Volkspartei, aims to make the social market economy fairer and is most supportive of coalitions with the bourgeois parties.
 
 @changed
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
+on-arrival: new_left_dissent += 5; democratic_socialist_dissent += 5; trade_unionist_dissent += 5; pragmatist_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
