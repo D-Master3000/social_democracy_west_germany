@@ -16,36 +16,31 @@ In our media and campaign materials, who should we consider as our main opponent
 - @anti_dem: The anti-democratic parties of the far right and left - the <span style="color: #700000;">**SED**</span> and <span style="color: #c26f2b;">**NPD**</span>.
 - @cdu: The <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>
 - @bourgeois: The bourgeois parties - the <span style="color: #000000;">**CDU**</span>, <span style="color: #286fe0;">**CSU**</span> and <span style="color: #FFCC00;">**FDP**</span>.
-# - @SED: The <span style="color: #700000;">**SED**</span>.
-# - @npd: The <span style="color: #c26f2b;">**NPD**</span> alone.
+- @SED: The <span style="color: #700000;">**SED**</span>.
+- @npd: The <span style="color: #c26f2b;">**NPD**</span> alone.
 - @easy_discard
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
+on-arrival: enemies = "anti-democratic parties"; democratic_socialist_strength += 5; pragmatist_strength += 5; new_left_dissent += 5; workers_spd += 0.3; white_collar_workers_spd += 0.3; workers_npd -= 0.5; white_collar_workers_npd -= 0.5;
 
 Attacking the far right and left is popular among all but the <span style="color: #94195b;">left wing</span> of our party, who would prefer to be fighting the bourgeois parties.
 
 @cdu
-on-arrival: enemies = "<span style="color: #000000;">**CDU**</span>"
+on-arrival: enemies = "CDU"; democratic_socialist_strength += 5; new_left_strength += 5; pragmatist_dissent += 5; workers_cdu -= 0.8; white_collar_workers_cdu -= 0.8, cdu_relation -= 5;
 
-Attacking our main rival is popular among all but the <span style="color: #de6a70;">pragmatist wing</span> of our party. This will make <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalitions</span> harder to form.
-
-@far_right
-on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
-
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
-
-@nsdap
-on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
-
-[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
-
-@kpd
-on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; z_relation += 5; workers_kpd -= 4;
-
-Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
+Attacking our main rival is popular among all but the <span style="color: #de6a70;">pragmatist wing</span> of our party. This may make <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalitions</span> harder to form.
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
+on-arrival: enemies = "bourgeois parties"; new_left_strength += 8; new_left_dissent -= 5; fdp_relation -= 5; cdu_relation -= 5; pragmatist_dissent += 8; workers_cdu -= 0.5; workers_fdp -= 0.5; white_collar_workers_cdu -= 0.5; white_collar_workers_fdp -= 0.5; coalition_dissent += 1
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+
+@SED
+on-arrival: enemies = "SED"; pragmatist_strength += 5; new_left_dissent += 8; pragmatist_dissent -= 5; fdp_relation += 5; cdu_relation += 5; workers_spd += 0.3; white_collar_workers_spd += 0.3;
+
+Attacking <span style="color: #700000;">**SED**</span> and the East German regime is popular among the <span style="color: #de6a70;">pragmatist wing</span>.
+
+@npd
+on-arrival: enemies = "NPD"; workers_npd -= 0.8; white_collar_workers_npd -= 0.8;
+
+[? if nsdap_r < 5 : The <span style="color: #c26f2b;">**NPD**</span> is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nsdap_r >= 5 : The rise of the <span style="color: #c26f2b;">**NPD**</span> is very worrying. Everyone in the party likes attacking Nazis. ?]
