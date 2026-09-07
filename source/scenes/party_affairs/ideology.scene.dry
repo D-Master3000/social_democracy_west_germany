@@ -15,9 +15,9 @@ The SPD is torn between many different ideological currents. What should be our 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @leftist: <span style="color: #94195b;">Class struggle, Anti-imperialism and radical transformation towards socialism are our primary goals.</span>
-- @democratic_socialist: Democratic Socialism should be the party's goal.
-- @trade_unionist: We should work with the trade unions to improve the lives of workers.
-- @pragmatist: As a Volkspartei, we should work for center left policies and support the social market economy.
+- @democratic_socialist: <span style="color: #A52A2A;">Democratic Socialism should be the party's goal.</span>
+- @trade_unionist: <span style="color: #E53935;">We should work with the trade unions to improve the lives of workers.</span>
+- @pragmatist: <span style="color: #de6a70;">As a Volkspartei, we should work for center left policies and support the social market economy.</span>
 - @easy_discard
 
 @leftist
