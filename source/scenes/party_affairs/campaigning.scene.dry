@@ -38,7 +38,7 @@ We have increased our campaigning among the employed middle class.
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: self_employed_spd += 1.5*(1-dissent); resources -= 1; self_employed_spd -= 0.5 if nationalism >= 51 or socialism <= 49
+on-arrival: self_employed_spd += 1.5*(1-dissent); resources -= 1; self_employed_spd -= 0.5 if (nationalism >= 51 || socialism <= 49)
 
 We have increased our campaigning among the self employed. [? if nationalism >= 51: The high levels of nationalism among this group make our campaign more difficult. ?] [? if socialism <= 49: Anti-socialism is widespread among this group. ?]
 
