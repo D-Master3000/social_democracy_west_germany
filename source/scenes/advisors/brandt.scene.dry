@@ -8,7 +8,7 @@ view-if: brandt_advisor = 1
 = Willy Brandt
 
 
-Brandt is [? if chancellor = "Kiesinger": the vice ?][? if chancellor = "Brandt": the current ?][? if chancellor = "Schmidt": a former ?] Chancellor, and is a long-time Social Democratic leader.
+Brandt is [? if chancellor = "Kiesinger": the Vice ?][? if chancellor = "Brandt": the current ?][? if chancellor = "Schmidt": a former ?] Chancellor, and is a long-time Social Democratic leader.
 
 - @relations
 
