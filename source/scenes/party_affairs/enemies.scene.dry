@@ -26,7 +26,7 @@ on-arrival: enemies = "anti-democratic parties"; democratic_socialist_strength +
 Attacking the far right and left is popular among all but the <span style="color: #94195b;">left wing</span> of our party, who would prefer to be fighting the bourgeois parties.
 
 @cdu
-on-arrival: enemies = "CDU"; democratic_socialist_strength += 5; new_left_strength += 5; pragmatist_dissent += 5; workers_cdu -= 0.8; white_collar_workers_cdu -= 0.8, cdu_relation -= 5;
+on-arrival: enemies = "CDU"; democratic_socialist_strength += 5; new_left_strength += 5; pragmatist_dissent += 5; workers_cdu -= 0.8; white_collar_workers_cdu -= 0.8; cdu_relation -= 5;
 
 Attacking our main rival is popular among all but the <span style="color: #de6a70;">pragmatist wing</span> of our party. This may make <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalitions</span> harder to form.
 
