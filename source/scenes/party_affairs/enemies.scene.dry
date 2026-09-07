@@ -1,6 +1,6 @@
 title: Choosing Our Enemies
 new-page: true
-view-if: year <= 1930 and enemies_timer <= 0
+view-if: enemies_timer <= 0
 on-arrival: month_actions += 1; enemies_timer = 18
 max-visits: 3
 is-card: true
@@ -13,17 +13,22 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
-- @far_right: The far right - the NSDAP and DNVP.
-- @nsdap: The NSDAP alone.
-- @kpd: The KPD.
-- @bourgeois: The bourgeois parties - the Center and DVP.
+- @anti_dem: The anti-democratic parties of the far right and left - the <span style="color: #700000;">**SED**</span> and <span style="color: #c26f2b;">**NPD**</span>.
+- @cdu: The <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>
+- @bourgeois: The bourgeois parties - the <span style="color: #000000;">**CDU**</span>, <span style="color: #286fe0;">**CSU**</span> and <span style="color: #FFCC00;">**FDP**</span>.
+# - @SED: The <span style="color: #700000;">**SED**</span>.
+# - @npd: The <span style="color: #c26f2b;">**NPD**</span> alone.
 - @easy_discard
 
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Attacking the far right and left is popular among all but the <span style="color: #94195b;">left wing</span> of our party, who would prefer to be fighting the bourgeois parties.
+
+@cdu
+on-arrival: enemies = "<span style="color: #000000;">**CDU**</span>"
+
+Attacking our main rival is popular among all but the <span style="color: #de6a70;">pragmatist wing</span> of our party. This will make <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalitions</span> harder to form.
 
 @far_right
 on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
