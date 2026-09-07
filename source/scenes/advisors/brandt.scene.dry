@@ -1,6 +1,6 @@
 title: Willy Brandt
 is-pinned-card: true 
-tags: advisor, centrist
+tags: advisor, democratic_socialist
 card-image: img/portraits/BrandtWilly.jpg
 new-page: true
 view-if: brandt_advisor = 1
@@ -19,5 +19,5 @@ choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; cdu_relation += 5; fdp_relation += 5;
 
-We have improved our relations with the <span style="color: #000000;">**CDU**</span>, <span style="color: #286fe0;">**CSU**</span>, and <span style="color: #FFCC00;">**FDP**</span> [? if spd_in_government = 1, and reduced tensions with the coalition ?].
+We have improved our relations with the <span style="color: #000000;">**CDU**</span>, <span style="color: #286fe0;">**CSU**</span>, and <span style="color: #FFCC00;">**FDP**</span> [? if spd_in_government = 1: , and reduced tensions with the coalition ?].
 
