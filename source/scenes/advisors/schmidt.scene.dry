@@ -35,7 +35,7 @@ title: Support <span style="color: #de6a70;">Pragmatism</span>
 subtitle: support a center-left course.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; new_left_dissent += 5; pragmatist_dissent -= 8; pragmatist_strength += 8
+on-arrival: advisor_action_timer = 6; new_left_dissent += 5; pragmatist_dissent -= 8; pragmatist_strength += 10
 
 We have increased the strength of the <span style="color: #de6a70;">pragmatist</span> wing.
 
