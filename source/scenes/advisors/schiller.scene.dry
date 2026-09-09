@@ -1,0 +1,42 @@
+title: Karl Schiller
+is-pinned-card: true
+tags: advisor, pragmatist
+card-image: img/portraits/SchillerKarl.jpg
+view-if: hilferding_advisor = 1
+new-page: true
+#face-image: img/portraits/SchillerKarl.jpg
+
+= Karl Schiller
+
+Schiller is an economist and part of the <span style="color: #de6a70;">pragmatist</span> faction. As a supporter of social market economics, he is popular among the middle class.
+
+- @economy_ministry_
+- @white_collar
+- @self_employed
+- @root: Return to main
+
+@economy_ministry_
+title: Economic Policy
+subtitle: As Minister of Economy, Schiller can enact new economic policies.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : SPD not in government: ?] [? if economic_minister_party != "SPD" : The SPD does not control the ministry of economy. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government == 1 and economic_minister_party == "SPD"
+on-arrival: advisor_action_timer = 6; economic_policy_timer -= 6; last_advisor_action = 1
+go-to: economic_policy
+
+@white_collar
+title: Campaigning among white-collar workers
+subtitle: Improve our standing among the new middle class.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; white_collar_workers_spd += 2*(1-dissent);
+
+We have increased our campaigning among white-collar workers.
+
+@self_employed
+title: Campaigning among self-employed people
+subtitle: Improve our standing among the old middle class.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] 
+on-arrival: advisor_action_timer = 6; self_employed_workers_spd += 2*(1-dissent);
+
+We have increased our campaigning among self-employed people.
