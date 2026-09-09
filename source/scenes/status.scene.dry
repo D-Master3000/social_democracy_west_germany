@@ -107,7 +107,7 @@ Next Election: [+ bw_next_election +]
 
 Minister-President: [+ ba_leader +] [? if ba_leader_party == "CSU":(<span style="color: #286fe0;">**CSU**</span>) ?][? if ba_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if ba_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
 
-Government: [? if ba_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span><span style="color: #286fe0;">Coalition</span> ?][? if ba_coalition == "CSU majority":<span style="color: #286fe0;">**CSU**</span> majority ?][? if ba_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if ba_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if ba_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #286fe0;">geois</span> Coalition ?]
+Government: [? if ba_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #286fe0;">Coalition</span> ?][? if ba_coalition == "CSU majority":<span style="color: #286fe0;">**CSU**</span> majority ?][? if ba_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if ba_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if ba_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #286fe0;">geois</span> Coalition ?]
 
 Next Election: [+ ba_next_election +]
 
@@ -115,9 +115,73 @@ Next Election: [+ ba_next_election +]
 
 First Mayor: [+ be_leader +] [? if be_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if be_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if be_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
 
-Government: [? if be_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span><span style="color: #000000;">Coalition</span> ?][? if be_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if be_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if be_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if be_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+Government: [? if be_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if be_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if be_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if be_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if be_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
 
 Next Election: [+ be_next_election +]
+
+= Bremen
+
+First Mayor: [+ br_leader +] [? if br_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if br_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if br_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if br_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if br_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if br_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if br_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if br_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ br_next_election +]
+
+= Hamburg
+
+First Mayor: [+ ha_leader +] [? if ha_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if ha_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if ha_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if ha_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if ha_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if ha_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if ha_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if ha_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ ha_next_election +]
+
+= Hessen
+
+Minister-President: [+ he_leader +] [? if he_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if he_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if he_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if he_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if he_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if he_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if he_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if he_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ he_next_election +]
+
+= Niedersachsen
+
+Minister-President: [+ ns_leader +] [? if ns_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if ns_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if ns_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if ns_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if ns_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if ns_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if ns_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if ns_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ ns_next_election +]
+
+= Nordrhein-Westfalen
+
+Minister-President: [+ nw_leader +] [? if nw_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if nw_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if nw_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if nw_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if nw_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if nw_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if nw_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if nw_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ nw_next_election +]
+
+= Rheinland-Pfalz
+
+Minister-President: [+ rp_leader +] [? if rp_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if rp_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if rp_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if rp_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if rp_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if rp_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if rp_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if rp_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ rp_next_election +]
+
+= Saarland
+
+Minister-President: [+ sa_leader +] [? if sa_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if sa_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if sa_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if sa_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if sa_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if sa_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if sa_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if sa_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ sa_next_election +]
+
+= Schleswig-Holstein
+
+Minister-President: [+ sh_leader +] [? if sh_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if sh_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if sh_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if sh_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if sh_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if sh_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if sh_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if sh_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ sh_next_election +]
 
 @paramilitaries
 
