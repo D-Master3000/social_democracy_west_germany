@@ -11,6 +11,7 @@ view-if: brandt_advisor = 1
 Brandt is [? if chancellor = "Kiesinger": the Vice ?][? if chancellor = "Brandt": the current ?][? if chancellor = "Schmidt": a former ?] Chancellor and is a long-time Social Democratic leader.
 
 - @relations
+- @party_discipline
 
 @relations
 title: Negotiating with the Bourgeois parties
@@ -21,3 +22,20 @@ on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_governmen
 
 We have improved our relations with the <span style="color: #000000;">**CDU**</span>, <span style="color: #286fe0;">**CSU**</span>, and <span style="color: #FFCC00;">**FDP**</span>[? if spd_in_government = 1: , and reduced tensions with the coalition ?].
 
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; new_left_dissent -= 10; trade_unionist_dissent -= 10; democratic_socialist_dissent -= 10; pragmatist_dissent -= 10
+
+We have enforced party discipline to reduce dissent across all factions.
+
+@support_democratic_socialists
+title: Support <span style="color: #A52A2A;">Democratic Socialism</span>
+subtitle: support a left course.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; new_left_dissent += 2; pragmatist_dissent += 2; democratic_socialist_strength += 10; democratic_socialist_dissent -= 8
+
+We have increased the strength of the <span style="color: #A52A2A;">democratic socialist</span> wing.
