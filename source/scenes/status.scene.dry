@@ -93,6 +93,32 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="Pragmatists embraced the Godesberg consensus, the social market economy and cold-war Atlanticist alliances to maximize electoral appeal."><span style="color: #de6a70;">**Pragmatists**</span></span> strength: [+ pragmatist_strength : strength +], dissent: [+ pragmatist_dissent : dissent +]
 
+@states
+
+= Baden-Württemberg
+
+Minister-President: [+ bw_leader +] [? if bw_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if bw_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if bw_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if bw_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span><span style="color: #000000;">Coalition</span> ?][? if bw_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if bw_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if bw_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if bw_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ bw_next_election +]
+
+= Bayern
+
+Minister-President: [+ ba_leader +] [? if ba_leader_party == "CSU":(<span style="color: #286fe0;">**CSU**</span>) ?][? if ba_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if ba_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if ba_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span><span style="color: #286fe0;">Coalition</span> ?][? if ba_coalition == "CSU majority":<span style="color: #286fe0;">**CSU**</span> majority ?][? if ba_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if ba_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if ba_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #286fe0;">geois</span> Coalition ?]
+
+Next Election: [+ ba_next_election +]
+
+= Berlin
+
+First Mayor: [+ be_leader +] [? if be_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if be_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if be_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
+
+Government: [? if be_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span><span style="color: #000000;">Coalition</span> ?][? if be_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if be_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if be_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if be_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+
+Next Election: [+ be_next_election +]
+
 @paramilitaries
 
 = Terrorist Groups
