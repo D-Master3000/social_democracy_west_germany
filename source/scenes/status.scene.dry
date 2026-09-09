@@ -99,7 +99,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 Minister-President: [+ bw_leader +] [? if bw_leader_party == "CDU":(<span style="color: #000000;">**CDU**</span>) ?][? if bw_leader_party == "SPD": (<span style="color: #C00000;">**SPD**</span>) ?][? if bw_leader_party == "FDP": (<span style="color: #FFCC00;">**FDP**</span>) ?]
 
-Government: [? if bw_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span><span style="color: #000000;">Coalition</span> ?][? if bw_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if bw_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if bw_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if bw_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
+Government: [? if bw_coalition == "Grand Coalition":<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> ?][? if bw_coalition == "CDU majority":<span style="color: #000000;">**CDU**</span> majority ?][? if bw_coalition == "SPD majority":<span style="color: #C00000;">**SPD**</span> majority ?][? if bw_coalition == "Social-liberal Coalition":<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition ?][? if bw_coalition == "Bourgeois Coalition":<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition ?]
 
 Next Election: [+ bw_next_election +]
 
