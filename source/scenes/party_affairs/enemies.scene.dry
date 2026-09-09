@@ -38,7 +38,7 @@ Our anti-bourgeois rhetoric is popular among the left, but may make it harder to
 @SED
 on-arrival: enemies = "SED"; pragmatist_strength += 5; new_left_dissent += 8; pragmatist_dissent -= 5; fdp_relation += 5; cdu_relation += 5; workers_spd += 0.3; white_collar_workers_spd += 0.3;
 
-Attacking <span style="color: #700000;">**SED**</span> and the East German regime is popular among the <span style="color: #de6a70;">pragmatist wing</span>.
+Attacking the <span style="color: #700000;">**SED**</span> and the East German regime is popular among the <span style="color: #de6a70;">pragmatist wing</span>.
 
 @npd
 on-arrival: enemies = "NPD"; workers_npd -= 0.8; white_collar_workers_npd -= 0.8;
