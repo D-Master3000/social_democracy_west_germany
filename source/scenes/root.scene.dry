@@ -111,36 +111,57 @@ Q.spd_sh = 0;
 Q.bw_leader = "Filbinger";
 Q.bw_leader_party = "CDU";
 Q.bw_coalition = "Grand Coalition";
+Q.bw_next_election = "April 1972";
+
 Q.ba_leader = "Goppel";
 Q.ba_leader_party = "CSU";
 Q.ba_coalition = "CSU majority";
+Q.ba_next_election = "November 1970";
+
 Q.be_leader = "Schütz";
 Q.be_leader_party = "SPD";
 Q.be_coalition = "Social-liberal Coalition";
+Q.be_next_election = "March 1971";
+
 Q.br_leader = "Koschnick";
 Q.br_leader_party = "SPD";
 Q.br_coalition = "Social-liberal Coalition";
+Q.br_next_election = "Oktober 1971";
+
 Q.ha_leader = "Weichmann";
 Q.ha_leader_party = "SPD";
 Q.ha_coalition = "SPD majority";
+Q.ha_next_election = "March 1970";
+
 Q.he_leader = "Zinn";
 Q.he_leader_party = "SPD";
 Q.he_coalition = "SPD majority";
+Q.he_next_election = "November 1970";
+
 Q.ns_leader = "Diederichs";
 Q.ns_leader_party = "SPD";
 Q.ns_coalition = "Grand Coalition";
+Q.ns_next_election = "June 1970";
+
 Q.nw_leader = "Kühn";
 Q.nw_leader_party = "SPD";
 Q.nw_coalition = "Social-liberal Coalition";
+Q.nw_next_election = "June 1970";
+
 Q.rp_leader = "Altmeier";
 Q.rp_leader_party = "CDU";
 Q.rp_coalition = "Bourgeois Coalition";
+Q.rp_next_election = "March 1971";
+
 Q.sa_leader = "Röder";
 Q.sa_leader_party = "CDU";
 Q.sa_coalition = "Bourgeois Coalition";
+Q.sa_next_election = "June 1970";
+
 Q.sh_leader = "Lemke";
 Q.sh_leader_party = "CDU";
 Q.sh_coalition = "Bourgeois Coalition";
+Q.sh_next_election = "April 1971";
 
 Q.bundeskriminalamt_strength = 8.5;
 Q.bundeskriminalamt_loyalty = 0.5;
