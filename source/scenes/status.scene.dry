@@ -138,9 +138,9 @@ Support for <span style="color: #3E88B3;">**Nationalism**</span>: [+ nationalism
 
 **Detailed results for each demographic**
 
-Blue Collar Workers: <span style="color: #C00000;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ workers_npd_display +]%, Others: [+ workers_other_display +]%
+Blue-Collar Workers: <span style="color: #C00000;">**SPD**</span>: [+ workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ workers_npd_display +]%, Others: [+ workers_other_display +]%
 
-White Collar Workers + Beamte: <span style="color: #C00000;">**SPD**</span>: [+ white_collar_workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ white_collar_workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ white_collar_workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ white_collar_workers_display +]%, Others: [+ white_collar_workers_other_display +]%
+White-Collar Workers + Beamte: <span style="color: #C00000;">**SPD**</span>: [+ white_collar_workers_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ white_collar_workers_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ white_collar_workers_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ white_collar_workers_display +]%, Others: [+ white_collar_workers_other_display +]%
 
 Self Employed: <span style="color: #C00000;">**SPD**</span>: [+ self_employed_spd_display +]%, <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>: [+ self_employed_cdu_display +]%, <span style="color: #FFCC00;">**FDP**</span>: [+ self_employed_fdp_display +]%; <span style="color: #c26f2b;">**NPD**</span>: [+ self_employed_npd_display +]%, Others: [+ self_employed_other_display +]%
 
