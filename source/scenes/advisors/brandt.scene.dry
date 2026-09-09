@@ -12,6 +12,7 @@ Brandt is [? if chancellor = "Kiesinger": the Vice ?][? if chancellor = "Brandt"
 
 - @relations
 - @party_discipline
+- @support_democratic_socialists
 
 @relations
 title: Negotiating with the Bourgeois parties
