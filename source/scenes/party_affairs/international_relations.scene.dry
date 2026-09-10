@@ -48,7 +48,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; usa_relation += 1
 
-While not a <span style="color: #C00000;">socialist</span> party, it is still worth it to have contacts with the<span style="color: #00AEF3;">Democrats</span> to improve relations with America.
+While not a <span style="color: #C00000;">socialist</span> party, it is still worth it to have contacts with the <span style="color: #00AEF3;">Democrats</span> to improve relations with America.
 
 @reduce
 
