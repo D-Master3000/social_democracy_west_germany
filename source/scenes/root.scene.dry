@@ -475,7 +475,7 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-set-bg: img/map_3.jpg
+set-bg: img/map_brd.jpg
 new-page: true
 
 > *"Dictatorship remains dictatorship. Exploitation remains exploitation. Our place, however, is and remains on the side of freedom and social progress, of the struggle for social security and the humanization of human society."*
