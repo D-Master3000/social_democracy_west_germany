@@ -101,6 +101,9 @@ The <span style="color: #000000;">**CDU**</span> runs Gerhard Schröder, the def
 - @FDP_choice: Who will the <span style="color: #FFCC00;">**FDP**</span> and <span style="color: #c26f2b;">**NPD**</span> support?
 
 @FDP_choice
+go-to: FDP_SPD if fdp_relation >= 60; FDP_CDU if fdp_realtion < 60
+
+@FDP_SPD
 
 The <span style="color: #FFCC00;">liberals</span> have decided to support our candidate! The <span style="color: #c26f2b;">**NPD**</span> delegates seem to vote for Schröder...
 
