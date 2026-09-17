@@ -103,6 +103,26 @@ The <span style="color: #000000;">**CDU**</span> runs Gerhard Schröder, the def
 @FDP_choice
 go-to: FDP_SPD if fdp_relation >= 60; FDP_CDU if fdp_realtion < 60
 
+@FDP_CDU
+
+The <span style="color: #FFCC00;">liberals</span> have decided to support Schröder. The <span style="color: #c26f2b;">**NPD**</span> delegates seem to do the same...
+
+- @vote_CDU
+
+@vote_CDU
+on-arrival: president = "Schröder"; president_party = "CDU"
+
+**First Round Results:**
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote Share</td>!}
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} Gustav Heinemann: {!</td><td>!} **44,3%**
+
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} Gerhard Schröder: {!</td><td>!} 54,6% {!</td></tr>!}
+{!</table>!}
+
+Gerhard Schröder of the <span style="color: #000000;">**CDU**</span> has won an absolute majority of the votes and becomes the next president.
+
 @FDP_SPD
 
 The <span style="color: #FFCC00;">liberals</span> have decided to support our candidate! The <span style="color: #c26f2b;">**NPD**</span> delegates seem to vote for Schröder...
