@@ -4,7 +4,7 @@ is-card: true
 tags: govt_affairs, cabinet
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
 view-if: spd_in_government = 1 and finance_minister_party = "SPD" and fiscal_policy_timer = 0
-card-image: img/portraits/HilferdingRudolf.jpg
+card-image: img/portraits/SchillerKarl.jpg
 go-to: fiscal_menu
 #subtitle: Issues of taxation, budget, and tariffs.
 
@@ -16,6 +16,8 @@ Fiscal policy involves issues of taxation and budget.
 @fiscal_menu
 
 Upper-income tax rates: [+ upper_tax_rates : taxation +]
+
+Middle-income tax rates: [+ middle_tax_rates : taxation +]
 
 Lower-income tax rates: [+ lower_tax_rates : taxation +]
 
@@ -35,34 +37,41 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 @raise_progressive
 subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?]
 choose-if: lower_tax_rates >= -5 and upper_tax_rates <= 5
-on-arrival: workers_spd += 6*(1-dissent); old_middle_spd -= 4; new_middle_spd -= 4; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 4; finance_goal_completed += 1; upper_tax_rates += 1; lower_tax_rates -= 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1
+on-arrival: workers_spd += 1*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_social_liberal_coalition); fdp_relation -= 8; cdu_relation -= 8; upper_tax_rates += 1; lower_tax_rates -= 1; capital_strike_progress += 3; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3
 
-Making the tax system more progressive is popular among our base, but it upsets our bourgeois coalition partners, as well as our minimal number of bourgeois voters.
+Making the tax system more progressive is popular among our base, but it upsets our bourgeois coalition partners.
 
 @raise_rich
 subtitle: +2 budget
 unavailable-subtitle: Tax rates are already too high.
 choose-if: upper_tax_rates <= 5
-on-arrival: upper_tax_rates += 1; capital_strike_progress += 1; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 4*(1-dissent); old_middle_spd -= 4; new_middle_spd -= 4; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; dvp_relation -= 4; unemployed += 1; finance_goal_completed += 1; inflation -= 0.6; economic_growth -= 0.4; new_middle_spd -= 2 if upper_tax_rates > 1; old_middle_spd -= 2 if upper_tax_rates > 1; left_dissent -= 3; labor_dissent -= 3
+on-arrival: upper_tax_rates += 1; capital_strike_progress += 3; capital_strike_progress += 1 if upper_tax_rates > 1; capital_strike_progress += 1 if upper_tax_rates > 3; workers_spd += 0.1*(1-dissent); coalition_dissent += 2 if (in_grand_coalition or in_social_liberal_coalition); coalition_dissent += 1 if capital_strike_progress >= 5; budget += 2; fdp_relation -= 10; cdu_relation -= 10; inflation -= 0.6; economic_growth -= 0.4; new_left_dissent -= 3; trade_unionist_dissent -= 3
 
 Raising taxes on the rich is popular among our base, but it alienates the bourgeoisie. Increasing taxes also decreases economic demand, which may lead to more unemployment.
 
+@raise_middle
+subtitle: +2 budget
+unavailable-subtitle: Tax rates are already too high.
+choose-if: middle_tax_rates <= 5
+on-arrival: middle_tax_rates += 1; capital_strike_progress += 1; white_collar_workers_spd -= 3; self_employed_spd -= 5; coalition_dissent += 1 if (in_grand_coalition or in_social_liberal_coalition); budget += 2; fdp_relation -= 5; cdu_relation -= 5; inflation -= 0.6; economic_growth -= 0.4; white_collar_workers_spd -= 2 if upper_tax_rates > 1; self_employed_spd -= 3 if upper_tax_rates > 1
+
+Raising income taxes on the middle class is unpopular. Increasing taxes also decreases economic demand, which may lead to less economic growth.
 
 @raise_poor
 title: Raise consumption taxes, which disproportionately affect the poor.
 subtitle: +2 budget
 unavailable-subtitle: Tax rates are already too high.
 choose-if: lower_tax_rates <= 5
-on-arrival: budget += 2; workers_spd -= 4; kpd_coalition_dissent += 1; lower_tax_rates += 1; workers_spd -= 5 if lower_tax_rates >= 2; labor_dissent += 3; left_dissent += 3
+on-arrival: budget += 2; workers_spd -= 4; lower_tax_rates += 1; workers_spd -= 5 if lower_tax_rates >= 2; trade_unionist_dissent += 5; new_left_dissent += 5
 
 We have raised taxes for the poor and working class. This hurts our support among the workers.
 
 
 @cut_overall
-subtitle: -3 budget
-unavailable-subtitle: -3 budget - [? if upper_tax_rates < -5 or lower_tax_rates < -5 : Tax rates are already too low. ?]
-choose-if: budget >= 3 and upper_tax_rates >= -5 and lower_tax_rates >= -5
-on-arrival: budget -= 3; upper_tax_rates -= 1; lower_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); workers_spd += 3*(1-dissent); dvp_relation += 5*(1-dissent); z_relation += 5*(1-dissent); unemployed -= 1.5 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 1; economic_growth += 0.6;
+subtitle: -4 budget
+unavailable-subtitle: -4 budget - [? if upper_tax_rates < -5 or lower_tax_rates < -5 or middle_tax_rates < -5: Tax rates are already too low. ?]
+choose-if: budget >= 4 and upper_tax_rates >= -5 and lower_tax_rates >= -5 and middle_tax_rates >= -5
+on-arrival: budget -= 4; upper_tax_rates -= 1; middle_tax_rates -= 1; lower_tax_rates -= 1; white_collar_workers_spd += 1.5*(1-dissent); self_employed_spd += 1.5*(1-dissent); workers_spd += 1.5*(1-dissent); fdp_relation += 5; cdu_relation += 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 1; economic_growth += 0.6; coalition_dissent -= 1 if coalition_dissent > 0;
 
 Cutting taxes benefits most the rich and middle-class, who pay more taxes than the working class. Our coalition partners are happy at our orthodox economic course.
 
@@ -71,19 +80,20 @@ title: Cut consumption taxes for the poor.
 subtitle: -2 budget
 unavailable-subtitle: -2 budget - [? if lower_tax_rates < -5: Tax rates are already too low. ?]
 choose-if: budget >= 2 and lower_tax_rates >= -5
-on-arrival: budget -= 2; lower_tax_rates -= 1; workers_spd += 5*(1-dissent); unemployed -= 0.7 if unemployed >= 5; inflation += 0.6; economic_growth += 0.4; finance_goal_completed += 1; labor_dissent -= 3; left_dissent -= 3;
+on-arrival: budget -= 2; lower_tax_rates -= 1; workers_spd += 1.5*(1-dissent); inflation += 0.6; economic_growth += 0.4; trade_unionist_dissent -= 3; new_left_dissent -= 3;
 
 Our tax cuts disproportionately benefit the poor and working class.
 
+@cut_middle
 
 @cut_rich
 title: Cut income taxes for the rich.
 subtitle: -2 budget
 unavailable-subtitle: -2 budget - [? if upper_tax_rates < -5: Tax rates are already too low. ?]
 choose-if: budget >= 2 and upper_tax_rates >= -5
-on-arrival: budget -= 2; upper_tax_rates -= 1; new_middle_spd += 5*(1-dissent); old_middle_spd += 4*(1-dissent); dvp_relation += 4*(1-dissent); z_relation += 4*(1-dissent); unemployed -= 0.7 if unemployed >= 5; capital_strike_progress -= 1 if upper_tax_rates < 0; inflation += 0.6; economic_growth += 0.4; labor_dissent += 3; left_dissent += 3
+on-arrival: budget -= 2; upper_tax_rates -= 1; fdp_relation += 5; z_relation += 5; capital_strike_progress -= 2 if upper_tax_rates < 0; inflation += 0.6; economic_growth += 0.4; trade_unionist_dissent += 3; new_left_dissent += 3
 
-We have reduced income and property taxes for the rich and middle class. The bourgeois parties approve of this orthodox economic course.
+We have reduced taxes for the rich. The bourgeois parties approve of this orthodox economic course.
 
 
 @raise_overall
