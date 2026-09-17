@@ -107,7 +107,7 @@ go-to: FDP_SPD if fdp_relation >= 60; FDP_CDU if fdp_realtion < 60
 
 The <span style="color: #FFCC00;">liberals</span> have decided to support Schröder. The <span style="color: #c26f2b;">**NPD**</span> delegates seem to do the same...
 
-- @vote_CDU
+- @vote_CDU: Results...
 
 @vote_CDU
 on-arrival: president = "Schröder"; president_party = "CDU"
