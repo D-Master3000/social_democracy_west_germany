@@ -47,7 +47,7 @@ go-to: liberalize_fail if progressive_coalition < 50; liberalize_success if prog
 @liberalize_fail
 on-arrival: cdu_relation -= 10; coalition_dissent += 1
 
-Unfortunately, our proposal is voted down in the Reichstag, with the conservatives speaking in particularly vehement opposition, and some of our own members breaking party discipline. The activists, feeling demoralized from this attempt, have decided to bide their time.
+Unfortunately, our proposal is voted down in the Bundestag, with the <span style="color: #000000;">Conservatives</span> speaking in particularly vehement opposition, and some of our own members breaking party discipline. The activists, feeling demoralized from this attempt, have decided to bide their time.
 
 @liberalize_success
 on-arrival: abortion_rights += 1; womens_rights += 1; coalition_dissent += 1; cdu_relation -= 15; workers_spd += 0.5*(1-dissent); white_collar_workers_spd += 0.5*(1-dissent)
