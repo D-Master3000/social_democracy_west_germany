@@ -38,5 +38,3 @@ title: Improve our relations with our eastern neighbors.
 on-arrival: east_relation += 1; east_relation += 1 if in_grand_coalition == 0
 
 We aim to improve relations with the DDR and the rest of the eastern block. Hopefully we can convince them of our peaceful intentions. [? if in_grand_coalition : The <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span> support the Hallstein doctrine and will sabotage our efforts. ?]
-
-Fascist Italy remains a problem, and the Soviet Union also lies outside the system. But for now, there is new hope for peace and prosperity throughout the continent.
