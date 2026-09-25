@@ -27,7 +27,7 @@ With control of the Labor Ministry, we can set national standards for labor. Our
 - @cancel_advisor_action
 
 @minimum_wage
-view-if: minimum_wage == 1
+view-if: minimum_wage <= 1
 on-arrival: minimum_wage += 1; trade_unionist_dissent -= 8; new_left_dissent -= 5; trade_unionist_strength += 5; workers_spd += 2*(1-dissent); fdp_relation -= 5; cdu_relation -= 5; coalition_dissent += 1; capital_strike_progress += 1; inflation += 0.1; economic_growth -= 0.1
 
 We have implemented a national minimum wage. This ensures that all working people can live with their wage.
