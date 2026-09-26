@@ -149,7 +149,7 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#C00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000000'> </div> !} CDU/CSU: {!</td><td>!} [+ cdu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> <div class="box" style='background-color:#286fe0'> </div> !} CDU/CSU: {!</td><td>!} [+ cdu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} FDP: {!</td><td>!} [+ fdp_r +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
  
