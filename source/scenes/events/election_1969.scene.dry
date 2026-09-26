@@ -42,7 +42,6 @@ for (var party of Q.parties) {
     Q['str_change_' + party] = sign + Q['change_' + party + '_r'].toFixed(1);
 }
 
-
 // get change arrows and signs
 
 
@@ -85,38 +84,43 @@ Q.election_records.push(election_result);
 !}
 on-departure:
 on-display: {!
-data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_r*5),
-    },
-    {
-        "id": "fdp",
-        "legend": "FDP",
-        "name": "FDP",
-        "seats": Math.round(Q.ddp_r*5),
-    },
-    {
-        "id": "cdu",
-        "legend": "CDU/CSU",
-        "name": "CDU/CSU",
-        "seats": Math.round(Q.cdu_r*5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
-    },
-    {
-        "id": "npd",
-        "legend": "NPD",
-        "name": "NPD",
-        "seats": Math.round(Q.npd_r*5),
-    },
-]);
+data = []
+data.push({
+      "id": "spd",
+      "legend": "SPD",
+      "name": "SPD",
+      "seats": Math.round(Q.spd_r*5),
+});
+data.push({
+      "id": "fdp",
+      "legend": "FDP",
+      "name": "FDP",
+      "seats": Math.round(Q.fdp_r*5),
+});
+data.push({
+      "id": "cdu",
+      "legend": "CDU",
+      "name": "CDU",
+      "seats": Math.round(Q.cdu_r*5*0.804),
+});
+data.push({
+      "id": "csu",
+      "legend": "CSU",
+      "name": "CSU",
+      "seats": Math.round(Q.cdu_r*5*0.196),
+});
+data.push({
+      "id": "npd",
+      "legend": "NPD",
+      "name": "NPD",
+      "seats": Math.round(Q.npd_r*5),
+});
+data.push({
+      "id": "other",
+      "legend": "Other",
+      "name": "Other",
+      "seats": Math.round(Q.other_r*5),
+});
 
 if (window && d3) {
     var width = 500; 
