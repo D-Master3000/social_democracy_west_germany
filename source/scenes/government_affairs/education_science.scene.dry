@@ -11,7 +11,7 @@ tags: govt_affairs, cabinet
 
 = Education and Science
 
-Education in Germany is the responsibility of the state governments. With our control over many states, we can 
+Education in Germany is the responsibility of the state governments. With our control over many states, we can set education policies for a large part of the country.
 
 [? if major_curriculum: Current educational curriculum - [+ major_curriculum +], [+ minor_curriculum +] ?]
 
