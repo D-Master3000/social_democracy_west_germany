@@ -143,24 +143,24 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#C00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} CDU/CSU: {!</td><td>!} [+ cdu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} CDU/CSU: {!</td><td>!} [+ cdu_r +]% {!</td><td>!} [+ str_change_cdu +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} FDP: {!</td><td>!} [+ fdp_r +]% {!</td><td>!} [+ str_change_fdp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NPD: {!</td><td>!} [+ npd_r +]% {!</td><td>!} [+ str_change_npd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#c26f2b'> </div> !} NPD: {!</td><td>!} [+ npd_r +]% {!</td><td>!} [+ str_change_npd +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
 
-Social Liberal Coalition (SPD + FDP): [+ social_liberal_coalition +]%
+<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition (<span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ social_liberal_coalition +]%
 
-Grand Coalition (SPD + CDU): [+ grand_coalition +]%
+<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> (<span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>): [+ grand_coalition +]%
 
-Bourgeois Coalition (CDU + FDP): [+ bourgeois_coalition +]%
+<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition (<span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ bourgeois_coalition +]%
 
 There are some potential coalition arrangements.
 
@@ -171,13 +171,13 @@ There are some potential coalition arrangements.
 - @grand_coalition
 
 @spd_majority
-title: SPD majority alone
-subtitle: SPD: [+ spd_r +]%
+title: <span style="color: #C00000;">**SPD**</span> majority alone
+subtitle: <span style="color: #C00000;">**SPD**</span>: [+ spd_r +]%
 view-if: spd_r >= 50
 on-arrival: chancellor = "Empty"; chancellor_party = "SPD"; spd_in_government = 1; in_spd_majority = 1; pro_republic += 5; foreign_minister_party = "SPD"; foreign_minister = "Breitscheid"; interior_minister_party = "SPD"; interior_minister = "Severing"; justice_minister_party = "SPD"; justice_minister = "Radbruch"; labor_minister_party = "SPD"; labor_minister = "Wissell"; reichswehr_minister_party = "SPD"; reichswehr_minister = "Leber"; economic_minister_party = "SPD"; economic_minister = "Schmidt"; finance_minister_party = "SPD"; finance_minister = "Hilferding"; agriculture_minister_party = "SPD"; agriculture_minister = "Baade"; reichswehr_loyalty -= 0.05; 
 achievement: majority_party
 
-Finally, the SPD can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
+Finally, the <span style="color: #C00000;">**SPD**</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 Who should be chancellor?
 
@@ -186,16 +186,15 @@ Who should be chancellor?
 @brandt_majority_chancellor
 on-arrival: chancellor = "Brandt"
 
-Willy Brandt has become chancellor of the SPD majority.
+Willy Brandt has become chancellor of the <span style="color: #C00000;">**SPD**</span> majority.
 
 @social_liberal_coalition
-title: We can form a Social-Liberal Coalition.
-subtitle: SPD + FDP ([+ social_liberal_coalition +]%)
+title: We can form a <span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition.
+subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span> ([+ social_liberal_coalition +]%)
 view-if: social_liberal_coalition >= 50
 on-arrival: leverage += 5; leverage += 5 if z_party_leader == "Joos"; in_weimar_coalition = 1; spd_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = ddp_name; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
-achievement: weimar_coalition
 
-We have enough votes to form a Social-Liberal Coalition government consisting of the SPD and FDP!
+We have enough votes to form a Social-Liberal Coalition government consisting of the <span style="color: #C00000;">**SPD**</span> and <span style="color: #FFCC00;">**FDP**</span>!
 
 Who should be the chancellor?
 
@@ -211,9 +210,9 @@ Rudolf Breitscheid has been appointed chancellor.
 
 
 @grand_coalition
-title: We can form a Grand Coalition.
+title: We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span>.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: SPD + CDU ([+ grand_coalition +]%)
+subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span> ([+ grand_coalition +]%)
 on-arrival: in_grand_coalition = 1;
 go-to: grand_coalition_spd_lead if largest_party == "SPD"; grand_coalition_cdu_lead if largest_party == "CDU"
 
@@ -222,12 +221,12 @@ view-if: grand_coalition >= 50
 on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Kiesinger"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
 go-to: ministries
 
-We can form a Grand Coalition with the CDU and CSU. The Union has more votes than us and gets the chancellory.
+We can form a Grand Coalition with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. The Union has more votes than us and gets the chancellory.
 
 @grand_coalition_spd_lead
 on-arrival: leverage -= 15
 
-We can form a Grand Coalition with the CDU and CSU. We have more votes than the Union and get the chancellory.
+We can form a Grand Coalition with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. We have more votes than the Union and get the chancellory.
 
 Who should be the chancellor?
 
