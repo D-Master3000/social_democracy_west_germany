@@ -225,12 +225,12 @@ view-if: grand_coalition >= 50
 on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Kiesinger"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; defense_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
 go-to: ministries
 
-We can form a Grand Coalition with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. The Union has more votes than us and gets the chancellory.
+We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. The Union has more votes than us and gets the chancellory.
 
 @grand_coalition_spd_lead
 on-arrival: leverage -= 15; in_grand_coalition = 1
 
-We can form a Grand Coalition with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. We have more votes than the Union and get the chancellory.
+We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. We have more votes than the Union and get the chancellory.
 
 Who should be the chancellor?
 
