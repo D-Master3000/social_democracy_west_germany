@@ -224,7 +224,7 @@ go-to: ministries
 We can form a Grand Coalition with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. The Union has more votes than us and gets the chancellory.
 
 @grand_coalition_spd_lead
-on-arrival: leverage -= 15
+on-arrival: leverage -= 15; in_grand_coalition = 1
 
 We can form a Grand Coalition with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. We have more votes than the Union and get the chancellory.
 
@@ -236,7 +236,7 @@ Who should be the chancellor?
 @brandt
 title: Willy Brandt for Chancellor
 subtitle:
-on-arrival: spd_in_government = 1; chancellor = "Brandt"; chancellor_party = "SPD"; in_grand_coalition = 1
+on-arrival: spd_in_government = 1; chancellor = "Brandt"; chancellor_party = "SPD"
 go-to: ministries
 
 Willy Brandt is voted Chancellor.
