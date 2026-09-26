@@ -212,21 +212,21 @@ Q.parties = ['spd', 'cdu', 'fdp', 'npd', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 58;
-Q.workers_cdu = 35;
-Q.workers_fdp = 3;
+Q.workers_spd = 55;
+Q.workers_cdu = 37;
+Q.workers_fdp = 4;
 Q.workers_npd = 3;
 Q.workers_other = 1;
 
-Q.self_employed_spd = 22;
-Q.self_employed_cdu = 58;
-Q.self_employed_fdp= 11;
+Q.self_employed_spd = 17;
+Q.self_employed_cdu = 60;
+Q.self_employed_fdp= 14;
 Q.self_employed_npd = 8;
 Q.self_employed_other = 1;
 
-Q.white_collar_workers_spd = 46;
+Q.white_collar_workers_spd = 40;
 Q.white_collar_workers_cdu = 45;
-Q.white_collar_workers_fdp= 6;
+Q.white_collar_workers_fdp= 12;
 Q.white_collar_workers_npd = 2.5;
 Q.white_collar_workers_other = 0.5;
 
