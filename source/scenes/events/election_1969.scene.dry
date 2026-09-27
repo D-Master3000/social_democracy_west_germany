@@ -236,7 +236,7 @@ go-to: grand_coalition_spd_lead if largest_party == "SPD"; grand_coalition_cdu_l
 
 @grand_coalition_cdu_lead
 view-if: grand_coalition >= 50
-on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Kiesinger"; chancellor_party = "CDU"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; defense_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
+on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Kiesinger"; chancellor_party = "CDU"; foreign_minister_party = "CDU"; foreign_minister = "Schröder"; interior_minister_party = "CDU"; interior_minister = "Benda"; justice_minister_party = "CSU"; justice_minister = "Jaeger"; labor_minister_party = "CDU"; labor_minister = "Katzer"; defense_minister_party = "CDU"; defense_minister = "von Hassel"; economic_minister_party = "CDU"; economic_minister = "Schmücker"; finance_minister_party = "CSU"; finance_minister = "Strauß"; agriculture_minister_party = "CSU"; agriculture_minister = "Höcherl"; leverage = 40 if leverage >= 40;
 go-to: ministries
 
 We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. The Union has more votes than us and gets the chancellory.
@@ -254,7 +254,7 @@ Who should be the chancellor?
 @brandt
 title: Willy Brandt for Chancellor
 subtitle:
-on-arrival: spd_in_government = 1; chancellor = "Brandt"; chancellor_party = "SPD"
+on-arrival: spd_in_government = 1; chancellor = "Brandt"; chancellor_party = "SPD"; foreign_minister_party = "CDU"; foreign_minister = "Schröder"; interior_minister_party = "CDU"; interior_minister = "Benda"; justice_minister_party = "CSU"; justice_minister = "Jaeger"; labor_minister_party = "CDU"; labor_minister = "Katzer"; defense_minister_party = "CDU"; defense_minister = "von Hassel"; economic_minister_party = "CDU"; economic_minister = "Schmücker"; finance_minister_party = "CSU"; finance_minister = "Strauß"; agriculture_minister_party = "CSU"; agriculture_minister = "Höcherl";
 go-to: ministries
 
 Willy Brandt is voted Chancellor.
