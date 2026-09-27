@@ -236,13 +236,13 @@ go-to: grand_coalition_spd_lead if largest_party == "SPD"; grand_coalition_cdu_l
 
 @grand_coalition_cdu_lead
 view-if: grand_coalition >= 50
-on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Kiesinger"; chancellor_party = "CDU"; foreign_minister_party = "CDU"; foreign_minister = "Schröder"; interior_minister_party = "CDU"; interior_minister = "Benda"; justice_minister_party = "CSU"; justice_minister = "Jaeger"; labor_minister_party = "CDU"; labor_minister = "Katzer"; defense_minister_party = "CDU"; defense_minister = "von Hassel"; economic_minister_party = "CDU"; economic_minister = "Schmücker"; finance_minister_party = "CSU"; finance_minister = "Strauß"; agriculture_minister_party = "CSU"; agriculture_minister = "Höcherl"; leverage = 40 if leverage >= 40;
+on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Kiesinger"; chancellor_party = "CDU"; foreign_minister_party = "CDU"; foreign_minister = "Schröder"; interior_minister_party = "CDU"; interior_minister = "Benda"; justice_minister_party = "CSU"; justice_minister = "Jaeger"; labor_minister_party = "CDU"; labor_minister = "Katzer"; defense_minister_party = "CDU"; defense_minister = "von Hassel"; economic_minister_party = "CDU"; economic_minister = "Schmücker"; finance_minister_party = "CSU"; finance_minister = "Strauß"; agriculture_minister_party = "CSU"; agriculture_minister = "Höcherl"; leverage = 30 if leverage >= 30;
 go-to: ministries
 
 We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. The Union has more votes than us and gets the chancellory.
 
 @grand_coalition_spd_lead
-on-arrival: leverage -= 15; in_grand_coalition = 1
+on-arrival: leverage -= 15; in_grand_coalition = 1; leverage = 30 if leverage >= 30;
 
 We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> with the <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span>. We have more votes than the Union and get the chancellory.
 
