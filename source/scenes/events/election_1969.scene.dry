@@ -52,7 +52,7 @@ if (Q.cdu_r >= Q.spd_r) {
 }
 
 // coalitions
-Q.social_liberal_coalition = Q.spd_r + Q.fdp_r;
+Q.social_liberal_coalition = Math.round((Q.spd_r + Q.fdp_r)*1000)/10;
 Q.grand_coalition = Q.spd_r + Q.cdu_r;
 Q.bourgeois_coalition = Q.fdp_r + Q.cdu_r;
 
@@ -65,14 +65,6 @@ Q.spd_in_government = 0;
 Q.in_grand_coalition = 0;
 Q.spd_toleration = 0;
 Q.spd_caretaker = 0;
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister_party = 'Z';
-Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
-Q.defense_minister_party = 'I';
-Q.economic_minister_party = Q.ddp_name;
-Q.finance_minister_party = 'DVP';
-Q.agriculture_minister_party = 'Z';
 
 Q.strike_term_seen = 0;
 
