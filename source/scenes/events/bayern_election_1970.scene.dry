@@ -159,14 +159,14 @@ subtitle: <span style="color: #286fe0;">**CSU**</span>: [+ cdu_ba +]%
 view-if: cdu_ba >= 50
 on-arrival: ba_leader = "Goppel"; ba_leader_party = "CSU"; ba_coalition = "CSU Majority"; ba_next_election = "May 1975"
 
-The <span style="color: #286fe0;">**CSU**</span>/<span style="color: #286fe0;">**CSU**</span> faction has formed a majority government...
+The <span style="color: #286fe0;">**CSU**</span> has formed a majority government...
 
 @bourgeois_coalition
 title: A <span style="color: #FFCC00;">Bour</span><span style="color: #286fe0;">geois</span> Coalition is formed.
 subtitle: <span style="color: #286fe0;">**CSU**</span> + <span style="color: #286fe0;">**CSU**</span> + <span style="color: #FFCC00;">**FDP**</span> ([+ bourgeois_coalition_ba +]%)
 view-if: bourgeois_coalition_ba >= 50
 choose-if: cdu_ba <= 50
-unavailable-subtitle: [? if cdu_ba <= 50: The <span style="color: #286fe0;">**CSU**</span> does not need a coalition partner. ?]
+unavailable-subtitle: [? if cdu_ba >= 50: The <span style="color: #286fe0;">**CSU**</span> does not need a coalition partner. ?]
 on-arrival: ba_leader = "Goppel"; ba_leader_party = "CSU"; ba_coalition = "Bourgeois Coalition"; ba_next_election = "May 1975"
 
 For some reason, we cannot or do not want to form a government. This has led to the <span style="color: #286fe0;">**CSU**</span> forming a coalition with the <span style="color: #FFCC00;">**FDP**</span>.
@@ -195,7 +195,7 @@ title: We can form a <span style="color: #C00000;">Grand</span> <span style="col
 view-if: grand_coalition_ba >= 50
 choose-if: cdu_relation >= 60 and cdu_ba <= 50
 subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #286fe0;">**CSU**</span> ([+ grand_coalition_ba +]%)
-unavailable-subtitle: [? if cdu_relation < 60: The <span style="color: #286fe0;">**CSU**</span> does not want to form a coalition with us. ?][? if cdu_ba <= 50: The <span style="color: #286fe0;">**CSU**</span> does not need a coalition partner. ?]
+unavailable-subtitle: [? if cdu_relation < 60: The <span style="color: #286fe0;">**CSU**</span> does not want to form a coalition with us. ?][? if cdu_ba >= 50: The <span style="color: #286fe0;">**CSU**</span> does not need a coalition partner. ?]
 on-arrival: ba_leader = "Gabert" if largest_party_ba == "SPD"; ba_leader = "Goppel" if largest_party_ba == "CSU"; ba_leader_party = "SPD" if largest_party_ba == "SPD"; ba_leader_party = "CSU" if largest_party_ba == "CSU"; ba_coalition = "Grand Coalition"; ba_next_election = "May 1975"
 
 We have formed a Coalition with the <span style="color: #286fe0;">**CSU**</span>.
