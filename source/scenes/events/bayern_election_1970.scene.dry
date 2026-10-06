@@ -123,7 +123,7 @@ go-to: coalition_menu
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td>
+{!<tr><td>Party</td><td>Vote share</td>!}
 {!<tr><td><div class="box" style='background-color:#C00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_ba +]%**
 
 {!<tr><td><div class="box" style='background-color:#286fe0'> </div> !} CSU: {!</td><td>!} [+ cdu_ba +]% {!</td><td>!}
