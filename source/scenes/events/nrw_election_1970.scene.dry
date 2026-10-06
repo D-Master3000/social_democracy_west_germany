@@ -4,7 +4,7 @@ view-if: year = 1970 and month == 6
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: presidential_election_seen = 1;
+on-arrival:
 set-jump: post_election_1970_nrw
 tags: event
 
