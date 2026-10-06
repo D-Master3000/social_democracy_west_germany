@@ -126,9 +126,9 @@ go-to: coalition_menu
 
 <span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition (<span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ social_liberal_coalition_nrw +]%
 
-<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> (<span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span>): [+ grand_coalition_nrw +]%
+<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> (<span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span>: [+ grand_coalition_nrw +]%
 
-<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition (<span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ bourgeois_coalition_nrw +]%
+<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition (<span style="color: #000000;">**CDU**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ bourgeois_coalition_nrw +]%
 
 There are some potential coalition arrangements.
 
@@ -158,7 +158,7 @@ For some reason, we cannot or do not want to form a government. This has led to 
 
 @spd_majority
 title: A <span style="color: #C00000;">**SPD**</span> majority alone
-subtitle: <span style="color: #000000;">**SPD**</span>: [+ spd_nrw +]%
+subtitle: <span style="color: #C00000;">**SPD**</span>: [+ spd_nrw +]%
 view-if: spd_nrw >= 50
 on-arrival: nw_leader = "Kühn"; nw_leader_party = "SPD"; nw_coalition = "SPD Majority"; nw_next_election = "May 1975"
 achievement: majority_party
