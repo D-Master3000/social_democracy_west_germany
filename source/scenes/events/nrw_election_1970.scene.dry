@@ -146,7 +146,7 @@ subtitle: <span style="color: #000000;">**CDU**</span>: [+ cdu_nrw +]%
 view-if: cdu_nrw >= 50
 on-arrival: nw_leader = "Köppler"; nw_leader_party = "CDU"; nw_coalition = "CDU Majority"; nw_next_election = "May 1975"
 
-The <span style="color: #000000;">**CDU**</span>/<span style="color: #286fe0;">**CSU**</span> faction has formed a majority government...
+The <span style="color: #000000;">**CDU**</span> has formed a majority government...
 
 @bourgeois_coalition
 title: A <span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition is formed.
