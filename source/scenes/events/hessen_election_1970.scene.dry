@@ -1,0 +1,199 @@
+title: Hessen Landtag Election
+subtitle:
+view-if: year = 1970 and month == 6
+frequency: 1000
+max-visits: 1
+new-page: true
+on-arrival:
+set-jump: post_election_1970_he
+tags: event
+
+= Hessen Landtag Election
+
+The Landtag of Hessen is getting elected.
+
+- @election_algorithm: May we do our best...
+
+@post_election_1970_he
+on-arrival: {!
+var he_adjustment_factors = {
+    spd: 0.9,
+    cdu: 1.1,
+    fdp: 1.2,
+    npd: 0.8,
+    other: 1.0,
+};
+
+var new_party_sum = 0;
+for (var party of Q.parties) {
+    Q.spd_he = Q.spd_votes*he_adjustment_factors.spd;
+    Q.cdu_he = Q.cdu_votes*he_adjustment_factors.cdu;
+    Q.fdp_he = Q.fdp_votes*he_adjustment_factors.fdp;
+    Q.npd_he = Q.npd_votes*he_adjustment_factors.npd;
+    Q.other_he = Q.other_votes*he_adjustment_factors.other;
+
+    if (Q[party + '_votes'] < 5 || party == 'other' || Q[party + '_henned']) {
+        Q[party + '_he'] = 0;
+    }
+
+    new_party_sum += Q[party + '_he'];
+}
+// calculate new party sum if electoral reform
+for (var party of Q.parties) {
+    if (Q[party + '_he'] > 0) {
+        Q[party + '_he'] = Math.round(Q[party + '_he']*1000/new_party_sum)/10;
+    }
+}
+
+// get change arrows and signs
+
+
+// The largest party can only be the CDU or the SPD.
+Q.largest_party = 'SPD';
+if (Q.cdu_he >= Q.spd_he) {
+    Q.largest_party_he = 'CDU';
+}
+
+// coalitions
+Q.social_liberal_coalition_he = Q.spd_he + Q.fdp_he;
+Q.grand_coalition_he = Q.spd_he + Q.cdu_he;
+Q.bourgeois_coalition_he = Q.fdp_he + Q.cdu_he;
+
+var election_result = {'date': new Date(Q.year, Q.month - 1)};
+for (var party of Q.parties) {
+    election_result[party] = Q[party + '_he'];
+}
+Q.election_records.push(election_result);
+!}
+on-departure:
+on-display: {!
+data = []
+data.push({
+      "id": "spd",
+      "legend": "SPD",
+      "name": "SPD",
+      "seats": Math.round(Q.spd_he*2),
+});
+data.push({
+      "id": "fdp",
+      "legend": "FDP",
+      "name": "FDP",
+      "seats": Math.round(Q.fdp_he*2),
+});
+data.push({
+      "id": "cdu",
+      "legend": "CDU",
+      "name": "CDU",
+      "seats": Math.round(Q.cdu_he*2),
+});
+data.push({
+      "id": "npd",
+      "legend": "NPD",
+      "name": "NPD",
+      "seats": Math.round(Q.npd_he*2),
+});
+data.push({
+      "id": "other",
+      "legend": "Other",
+      "name": "Other",
+      "seats": Math.round(Q.other_he*2),
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+= Election results
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote share</td>!}
+{!<tr><td><div class="box" style='background-color:#C00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_he +]%**
+
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} CDU: {!</td><td>!} [+ cdu_he +]% {!</td><td>!}
+
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} FDP: {!</td><td>!} [+ fdp_he +]% {!</td><td>!}
+ 
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_he +] % {!</td><td>!}
+
+{!<tr><td><div class="box" style='background-color:#c26f2b'> </div> !} NPD: {!</td><td>!} [+ npd_he +]% {!</td><td>!}
+{!</table>!}
+
+**Potential coalitions:**
+
+<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition (<span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ social_liberal_coalition_he +]%
+
+<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> (<span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span>: [+ grand_coalition_he +]%
+
+<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition (<span style="color: #000000;">**CDU**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ bourgeois_coalition_he +]%
+
+There are some potential coalition arrangements.
+
+@coalition_menu
+
+- @spd_majority
+- @cdu_majority
+- @social_liberal_coalition
+- @grand_coalition
+- @bourgeois_coalition
+
+@cdu_majority
+title: A <span style="color: #000000;">**CDU**</span> majority alone
+subtitle: <span style="color: #000000;">**CDU**</span>: [+ cdu_he +]%
+view-if: cdu_he >= 50
+on-arrival: he_leader = "Dregger"; he_leader_party = "CDU"; he_coalition = "CDU majority"; he_next_election = "Oktober 1974"
+
+The <span style="color: #000000;">**CDU**</span> has formed a majority government...
+
+@bourgeois_coalition
+title: A <span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition is formed.
+subtitle: <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span> + <span style="color: #FFCC00;">**FDP**</span> ([+ bourgeois_coalition_he +]%)
+view-if: bourgeois_coalition_he >= 50
+on-arrival: he_leader = "Dregger"; he_leader_party = "CDU"; he_coalition = "Bourgeois Coalition"; he_next_election = "Oktober 1974"
+
+For some reason, we cannot or do not want to form a government. This has led to the <span style="color: #000000;">**CDU**</span> forming a coalition with the <span style="color: #FFCC00;">**FDP**</span>.
+
+@spd_majority
+title: A <span style="color: #C00000;">**SPD**</span> majority alone
+subtitle: <span style="color: #C00000;">**SPD**</span>: [+ spd_he +]%
+view-if: spd_he >= 50
+on-arrival: he_leader = "Osswald"; he_leader_party = "SPD"; he_coalition = "SPD majority"; he_next_election = "Oktober 1974"
+achievement: majority_party
+
+We can continue our majority government!
+
+@social_liberal_coalition
+title: We can form a <span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition.
+subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span> ([+ social_liberal_coalition_he +]%)
+unavailable-subtitle: [? if fdp_relation < 60: The <span style="color: #FFCC00;">**FDP**</span> does not want to form a coalition with us. ?]
+view-if: social_liberal_coalition_he >= 50
+choose-if: fdp_relation >= 60
+on-arrival: he_leader = "Osswald"; he_leader_party = "SPD"; he_coalition = "Social-liberal Coalition"; he_next_election = "Oktober 1974"; fdp_relation += 5 if spd_he >= 50
+
+[? if spd_he < 50 : We have formed a coalition with the <span style="color: #FFCC00;">**FDP**</span> ?][? if spd_he >= 50 : Despite our majority, we have formed a coalition with the <span style="color: #FFCC00;">**FDP**</span>. This has increased their opinion of us. ?]
+
+@grand_coalition
+title: We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span>.
+view-if: grand_coalition_he >= 50
+choose-if: cdu_relation >= 60
+subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span> ([+ grand_coalition_he +]%)
+unavailable-subtitle: [? if cdu_relation < 60: The <span style="color: #000000;">**CDU**</span> does not want to form a coalition with us. ?]
+on-arrival: he_leader = "Osswald" if largest_party_he == "SPD"; he_leader = "Dregger" if largest_party_he == "CDU"; he_leader_party = "SPD" if largest_party_he == "SPD"; he_leader_party = "CDU" if largest_party_he == "CDU"; he_coalition = "Grand Coalition"; he_next_election = "Oktober 1974"; cdu_relation += 5 if spd_he >= 50
+
+[? if spd_he < 50 : We have formed a coalition with the <span style="color: #000000;">**CDU**</span> ?][? if spd_he >= 50 : Despite our majority, we have formed a coalition with the <span style="color: #000000;">**CDU**</span>. This has increased their opinion of us. ?]
