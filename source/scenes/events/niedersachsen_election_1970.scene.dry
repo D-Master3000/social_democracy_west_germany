@@ -36,6 +36,19 @@ for (var party of Q.parties) {
         Q[party + '_ns'] = 0;
     }
 
+    if (Q.npd_ns < 5) {
+        Q.npd_ns = 0;
+    }
+    if (Q.cdu_ns < 5) {
+        Q.cdu_ns = 0;
+    }
+    if (Q.spd_ns < 5) {
+        Q.spd_ns = 0;
+    }
+    if (Q.fdp_ns < 5) {
+        Q.fdp_ns = 0;
+    }
+
     new_party_sum += Q[party + '_ns'];
 }
 // calculate new party sum if electoral reform
