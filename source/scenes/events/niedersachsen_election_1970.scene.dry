@@ -17,9 +17,9 @@ The Landtag of Niedersachsen is getting elected. The elections were <span class=
 @post_election_1970_ns
 on-arrival: {!
 var ns_adjustment_factors = {
-    spd: 1.15,
-    cdu: 0.7,
-    fdp: 1.15,
+    spd: 1.1,
+    cdu: 1.1,
+    fdp: 0.8,
     npd: 1.0,
     other: 1.0,
 };
