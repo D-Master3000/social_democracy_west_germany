@@ -16,13 +16,26 @@ The Landtag of Nordrhein-Westfalen is getting elected. The most populous state i
 
 @post_election_1970_nrw
 on-arrival: {!
+var nrw_adjustment_factors = {
+    spd: 1.05,
+    cdu: 0.95,
+    fdp: 1.0,
+    npd: 1.0,
+    other: 1.0,
+};
+
 var new_party_sum = 0;
 for (var party of Q.parties) {
-    if (Q[party + '_votes'] < 5 || party == 'other' || Q[party + '_banned']) {
+    Q.spd_nrw = Q.spd_votes*nrw_adjustment_factors.spd;
+    Q.cdu_nrw = Q.cdu_votes*nrw_adjustment_factors.cdu;
+    Q.fdp_nrw = Q.fdp_votes*nrw_adjustment_factors.fdp;
+    Q.npd_nrw = Q.npd_votes*nrw_adjustment_factors.npd;
+    Q.other_nrw = Q.other_votes*nrw_adjustment_factors.other;
+
+    if (Q[party + '_votes'] < 5 || party == 'other' || Q[party + '_nrwnned']) {
         Q[party + '_nrw'] = 0;
-    } else {
-        Q[party + '_nrw'] = Q[party + '_votes'];
     }
+
     new_party_sum += Q[party + '_nrw'];
 }
 // calculate new party sum if electoral reform
