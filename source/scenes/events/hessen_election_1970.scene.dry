@@ -1,6 +1,6 @@
 title: Hessen Landtag Election
 subtitle:
-view-if: year = 1970 and month == 6
+view-if: year = 1970 and month == 11
 frequency: 1000
 max-visits: 1
 new-page: true
