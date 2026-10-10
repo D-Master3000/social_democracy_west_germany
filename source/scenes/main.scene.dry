@@ -15,7 +15,6 @@ max-cards: 3
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
 [? if year = 1969 and month = 7 : Apollo 11 has landed on the moon. This marks a new milestone for humanity. ?]
-[? if year = 1969 and month = 10 : Georg-August Zinn, our Minister-President in Hessen, had to resign due to his ailing health. Albert Osswald has been voted as the new MP. ?]
 
 
 - @party
