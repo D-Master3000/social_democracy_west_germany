@@ -1,4 +1,4 @@
-title: Hamburg Landtag Election
+title: Hamburg Bürgerschaft Election
 subtitle:
 view-if: year = 1970 and month == 3
 frequency: 1000
@@ -8,9 +8,9 @@ on-arrival:
 set-jump: post_election_1970_ha
 tags: event
 
-= Hamburg Landtag Election
+= Hamburg Bürgerschaft Election
 
-The Landtag of Hamburg is getting elected.
+The Bürgerschaft of Hamburg is getting elected. Hamburg is a stronghold of the <span style="color: #C00000;">**SPD**</span>.
 
 - @election_algorithm: May we do our best...
 
@@ -186,7 +186,7 @@ view-if: social_liberal_coalition_ha >= 50
 choose-if: fdp_relation >= 60
 on-arrival: ha_leader = "Weichmann"; ha_leader_party = "SPD"; ha_coalition = "Social-liberal Coalition"; ha_next_election = "March 1974"; fdp_relation += 5 if spd_ha >= 50
 
-We have enough votes to form a <span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition government consisting of the <span style="color: #C00000;">**SPD**</span> and <span style="color: #FFCC00;">**FDP**</span>!
+[? if spd_ha < 50 : We have formed a coalition with the <span style="color: #FFCC00;">**FDP**</span> ?][? if spd_ha >= 50 : Despite our majority, we have formed a coalition with the <span style="color: #FFCC00;">**FDP**</span>. This has increased their opinion of us. ?]
 
 @grand_coalition
 title: We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span>.
@@ -196,4 +196,4 @@ subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #00
 unavailable-subtitle: [? if cdu_relation < 60: The <span style="color: #000000;">**CDU**</span> does not want to form a coalition with us. ?]
 on-arrival: ha_leader = "Weichmann" if largest_party_ha == "SPD"; ha_leader = "Rollmann" if largest_party_ha == "CDU"; ha_leader_party = "SPD" if largest_party_ha == "SPD"; ha_leader_party = "CDU" if largest_party_ha == "CDU"; ha_coalition = "Grand Coalition"; ha_next_election = "March 1974"; cdu_relation += 5 if spd_ha >= 50
 
-We have formed a Coalition with the <span style="color: #000000;">**CDU**</span>.
+[? if spd_ha < 50 : We have formed a coalition with the <span style="color: #000000;">**CDU**</span> ?][? if spd_ha >= 50 : Despite our majority, we have formed a coalition with the <span style="color: #000000;">**CDU**</span>. This has increased their opinion of us. ?]
