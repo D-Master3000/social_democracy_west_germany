@@ -32,7 +32,7 @@ for (var party of Q.parties) {
     Q.npd_ns = Q.npd_votes*ns_adjustment_factors.npd;
     Q.other_ns = Q.other_votes*ns_adjustment_factors.other;
 
-    if (Q[party + '_votes'] < 5 || party == 'other' || Q[party + '_nsnned']) {
+    if (Q[party + '_ns'] < 5 || party == 'other' || Q[party + '_banned']) {
         Q[party + '_ns'] = 0;
     }
 
