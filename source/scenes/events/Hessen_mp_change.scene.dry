@@ -1,0 +1,12 @@
+title: Hessen MP change
+subtitle:
+view-if: year = 1970 and month == 6
+frequency: 1000
+max-visits: 1
+tags: event
+view-if: year == 1969 and month == 10
+on-arrival: he_leader = "Osswald"
+
+= Hessen's Minister-President resigns
+
+Georg-August Zinn, our Minister-President in Hessen, had to resign due to his ailing health. Albert Osswald has been voted as the new MP.
