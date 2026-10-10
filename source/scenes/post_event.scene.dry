@@ -97,11 +97,6 @@ if (Q.dissent < 0) {
     Q.dissent = 0.95;
 }
 
-// Change stuff
-if (Q.month == 10 && Q.year == 1969) {
-    Q.he_leader = "Osswald";
-}
-
 // 1. update dates
 if (Q.month_actions >= 1) {
     Q.time += 1;
