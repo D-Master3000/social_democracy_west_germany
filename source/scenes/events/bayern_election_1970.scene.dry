@@ -157,7 +157,7 @@ There are some potential coalition arrangements.
 title: A <span style="color: #286fe0;">**CSU**</span> majority alone
 subtitle: <span style="color: #286fe0;">**CSU**</span>: [+ cdu_ba +]%
 view-if: cdu_ba >= 50
-on-arrival: ba_leader = "Goppel"; ba_leader_party = "CSU"; ba_coalition = "CSU Majority"; ba_next_election = "Oktober 1974"
+on-arrival: ba_leader = "Goppel"; ba_leader_party = "CSU"; ba_coalition = "CSU majority"; ba_next_election = "Oktober 1974"
 
 The <span style="color: #286fe0;">**CSU**</span> has formed a majority government...
 
@@ -175,7 +175,7 @@ For some reason, we cannot or do not want to form a government. This has led to 
 title: A <span style="color: #C00000;">**SPD**</span> majority alone
 subtitle: <span style="color: #C00000;">**SPD**</span>: [+ spd_ba +]%
 view-if: spd_ba >= 50
-on-arrival: ba_leader = "Gabert"; ba_leader_party = "SPD"; ba_coalition = "SPD Majority"; ba_next_election = "Oktober 1974"
+on-arrival: ba_leader = "Gabert"; ba_leader_party = "SPD"; ba_coalition = "SPD majority"; ba_next_election = "Oktober 1974"
 achievement: majority_party
 
 Finally, the <span style="color: #C00000;">**SPD**</span> can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible.
