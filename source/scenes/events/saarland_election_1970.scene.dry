@@ -38,6 +38,15 @@ for (var party of Q.parties) {
     if (Q.npd_sa < 5) {
         Q.npd_sa = 0;
     }
+    if (Q.cdu_sa < 5) {
+        Q.cdu_sa = 0;
+    }
+    if (Q.spd_sa < 5) {
+        Q.spd_sa = 0;
+    }
+    if (Q.fdp_sa < 5) {
+        Q.fdp_sa = 0;
+    }
 
     new_party_sum += Q[party + '_sa'];
 }
