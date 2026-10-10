@@ -1,6 +1,5 @@
 title: Hessen MP change
 subtitle:
-view-if: year = 1970 and month == 6
 frequency: 1000
 max-visits: 1
 tags: event
