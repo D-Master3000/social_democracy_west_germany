@@ -1,0 +1,3 @@
+title: Niedersachsen MP change
+view-if: year == 1969 and month == 10
+on-arrival: he_leader = "Osswald"
