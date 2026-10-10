@@ -1,0 +1,199 @@
+title: Saarland Landtag Election
+subtitle:
+view-if: year = 1970 and month == 6
+frequency: 1000
+max-visits: 1
+new-page: true
+on-arrival:
+set-jump: post_election_1970_sa
+tags: event
+
+= Saarland Landtag Election
+
+The Landtag of Saarland is getting elected.
+
+- @election_algorithm: May we do our best...
+
+@post_election_1970_sa
+on-arrival: {!
+var sa_adjustment_factors = {
+    spd: 0.85,
+    cdu: 1.2,
+    fdp: 0.8,
+    npd: 0.8,
+    other: 1.0,
+};
+
+var new_party_sum = 0;
+for (var party of Q.parties) {
+    Q.spd_sa = Q.spd_votes*sa_adjustment_factors.spd;
+    Q.cdu_sa = Q.cdu_votes*sa_adjustment_factors.cdu;
+    Q.fdp_sa = Q.fdp_votes*sa_adjustment_factors.fdp;
+    Q.npd_sa = Q.npd_votes*sa_adjustment_factors.npd;
+    Q.other_sa = Q.other_votes*sa_adjustment_factors.other;
+
+    if (Q[party + '_votes'] < 5 || party == 'other' || Q[party + '_sanned']) {
+        Q[party + '_sa'] = 0;
+    }
+
+    new_party_sum += Q[party + '_sa'];
+}
+// calculate new party sum if electoral reform
+for (var party of Q.parties) {
+    if (Q[party + '_sa'] > 0) {
+        Q[party + '_sa'] = Math.round(Q[party + '_sa']*1000/new_party_sum)/10;
+    }
+}
+
+// get change arrows and signs
+
+
+// The largest party can only be the CDU or the SPD.
+Q.largest_party = 'SPD';
+if (Q.cdu_sa >= Q.spd_sa) {
+    Q.largest_party_sa = 'CDU';
+}
+
+// coalitions
+Q.social_liberal_coalition_sa = Q.spd_sa + Q.fdp_sa;
+Q.grand_coalition_sa = Q.spd_sa + Q.cdu_sa;
+Q.bourgeois_coalition_sa = Q.fdp_sa + Q.cdu_sa;
+
+var election_result = {'date': new Date(Q.year, Q.month - 1)};
+for (var party of Q.parties) {
+    election_result[party] = Q[party + '_sa'];
+}
+Q.election_records.push(election_result);
+!}
+on-departure:
+on-display: {!
+data = []
+data.push({
+      "id": "spd",
+      "legend": "SPD",
+      "name": "SPD",
+      "seats": Math.round(Q.spd_sa*2),
+});
+data.push({
+      "id": "fdp",
+      "legend": "FDP",
+      "name": "FDP",
+      "seats": Math.round(Q.fdp_sa*2),
+});
+data.push({
+      "id": "cdu",
+      "legend": "CDU",
+      "name": "CDU",
+      "seats": Math.round(Q.cdu_sa*2),
+});
+data.push({
+      "id": "npd",
+      "legend": "NPD",
+      "name": "NPD",
+      "seats": Math.round(Q.npd_sa*2),
+});
+data.push({
+      "id": "other",
+      "legend": "Other",
+      "name": "Other",
+      "seats": Math.round(Q.other_sa*2),
+});
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: coalition_menu
+
+= Election results
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Party</td><td>Vote share</td>!}
+{!<tr><td><div class="box" style='background-color:#C00000; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_sa +]%**
+
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !} CDU: {!</td><td>!} [+ cdu_sa +]% {!</td><td>!}
+
+{!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} FDP: {!</td><td>!} [+ fdp_sa +]% {!</td><td>!}
+ 
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_sa +] % {!</td><td>!}
+
+{!<tr><td><div class="box" style='background-color:#c26f2b'> </div> !} NPD: {!</td><td>!} [+ npd_sa +]% {!</td><td>!}
+{!</table>!}
+
+**Potential coalitions:**
+
+<span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition (<span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ social_liberal_coalition_sa +]%
+
+<span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span> (<span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span>: [+ grand_coalition_sa +]%
+
+<span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition (<span style="color: #000000;">**CDU**</span> + <span style="color: #FFCC00;">**FDP**</span>): [+ bourgeois_coalition_sa +]%
+
+There are some potential coalition arrangements.
+
+@coalition_menu
+
+- @spd_majority
+- @cdu_majority
+- @social_liberal_coalition
+- @grand_coalition
+- @bourgeois_coalition
+
+@cdu_majority
+title: A <span style="color: #000000;">**CDU**</span> majority alone
+subtitle: <span style="color: #000000;">**CDU**</span>: [+ cdu_sa +]%
+view-if: cdu_sa >= 50
+on-arrival: sa_leader = "Röder"; sa_leader_party = "CDU"; sa_coalition = "CDU majority"; sa_next_election = "May 1975"
+
+The <span style="color: #000000;">**CDU**</span> has formed a majority government...
+
+@bourgeois_coalition
+title: A <span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> Coalition is formed.
+subtitle: <span style="color: #000000;">**CDU**</span> + <span style="color: #286fe0;">**CSU**</span> + <span style="color: #FFCC00;">**FDP**</span> ([+ bourgeois_coalition_sa +]%)
+view-if: bourgeois_coalition_sa >= 50
+on-arrival: sa_leader = "Röder"; sa_leader_party = "CDU"; sa_coalition = "Bourgeois Coalition"; sa_next_election = "May 1975"
+
+For some reason, we cannot or do not want to form a government. This has led to the <span style="color: #000000;">**CDU**</span> forming a coalition with the <span style="color: #FFCC00;">**FDP**</span>.
+
+@spd_majority
+title: A <span style="color: #C00000;">**SPD**</span> majority alone
+subtitle: <span style="color: #C00000;">**SPD**</span>: [+ spd_sa +]%
+view-if: spd_sa >= 50
+on-arrival: sa_leader = "Conrad"; sa_leader_party = "SPD"; sa_coalition = "SPD majority"; sa_next_election = "May 1975"
+achievement: majority_party
+
+We can form a majority government!
+
+@social_liberal_coalition
+title: We can form a <span style="color: #C00000;">Social</span>-<span style="color: #FFCC00;">liberal</span> Coalition.
+subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #FFCC00;">**FDP**</span> ([+ social_liberal_coalition_sa +]%)
+unavailable-subtitle: [? if fdp_relation < 60: The <span style="color: #FFCC00;">**FDP**</span> does not want to form a coalition with us. ?]
+view-if: social_liberal_coalition_sa >= 50
+choose-if: fdp_relation >= 60
+on-arrival: sa_leader = "Conrad"; sa_leader_party = "SPD"; sa_coalition = "Social-liberal Coalition"; sa_next_election = "May 1975"; fdp_relation += 5 if spd_sa >= 50
+
+[? if spd_sa < 50 : We have formed a coalition with the <span style="color: #FFCC00;">**FDP**</span> ?][? if spd_sa >= 50 : Despite our majority, we have formed a coalition with the <span style="color: #FFCC00;">**FDP**</span>. This has increased their opinion of us. ?]
+
+@grand_coalition
+title: We can form a <span style="color: #C00000;">Grand</span> <span style="color: #000000;">Coalition</span>.
+view-if: grand_coalition_sa >= 50
+choose-if: cdu_relation >= 60
+subtitle: <span style="color: #C00000;">**SPD**</span> + <span style="color: #000000;">**CDU**</span> ([+ grand_coalition_sa +]%)
+unavailable-subtitle: [? if cdu_relation < 60: The <span style="color: #000000;">**CDU**</span> does not want to form a coalition with us. ?]
+on-arrival: sa_leader = "Conrad" if largest_party_sa == "SPD"; sa_leader = "Röder" if largest_party_sa == "CDU"; sa_leader_party = "SPD" if largest_party_sa == "SPD"; sa_leader_party = "CDU" if largest_party_sa == "CDU"; sa_coalition = "Grand Coalition"; sa_next_election = "May 1975"; cdu_relation += 5 if spd_sa >= 50
+
+[? if spd_sa < 50 : We have formed a coalition with the <span style="color: #000000;">**CDU**</span> ?][? if spd_sa >= 50 : Despite our majority, we have formed a coalition with the <span style="color: #000000;">**CDU**</span>. This has increased their opinion of us. ?]
