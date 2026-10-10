@@ -3,7 +3,6 @@ subtitle:
 frequency: 1000
 max-visits: 1
 tags: event
-new-page: true
 view-if: year == 1969 and month == 10
 on-arrival: he_leader = "Osswald"
 
