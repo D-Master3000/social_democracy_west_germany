@@ -99,7 +99,7 @@ if (Q.dissent < 0) {
 
 // Change stuff
 if (Q.month == 10 && Q.year == 1969) {
-    ns_leader = "Osswald";
+    Q.he_leader = "Osswald";
 }
 
 // 1. update dates
