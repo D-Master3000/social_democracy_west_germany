@@ -260,6 +260,7 @@
         } else {
           window.statusTab = newTab;
           window.updateSidebar();
+      }
   };
 
   window.onDisplayContent = function() {
