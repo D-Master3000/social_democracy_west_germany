@@ -182,7 +182,6 @@ blockquote + blockquote.attribution {
 /* This is mostly copied from undum. */
 #mid_panel {
   margin: 0 16rem;
-  margin-right: 13.5em;
 }
 #page {
   margin: 0 auto;
