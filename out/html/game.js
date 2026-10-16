@@ -254,9 +254,12 @@
         tabButtons[i].className = tabButtons[i].className.replace(' active', '');
       }
       tabButton.className += ' active';
-      window.statusTab = newTab;
-      window.updateSidebar();
-      window.updateSidebarRight();
+      if (isRight) {
+        window.statusTabRight = newTab;
+        window.updateSidebarRight();
+        } else {
+          window.statusTab = newTab;
+          window.updateSidebar();
   };
 
   window.onDisplayContent = function() {
@@ -298,6 +301,7 @@
 
   window.justLoaded = true;
   window.statusTab = "status";
+  window.statusTabRight = "status_right";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
