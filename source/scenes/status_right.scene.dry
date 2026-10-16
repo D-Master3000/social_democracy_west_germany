@@ -4,12 +4,10 @@ is-special: true
 
 = Missions
 
-<div style="text-align: center;">Reunification</div>
+<div style="text-align: center;">**Reunification**</div>
 <div><img src="img/portraits/dividedGermany.png" alt="BRD and DDR" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <div style="text-align: center;">Soviet Relations:</div>
 </div>
 
-<div style="white-space: nowrap; display: flex; justify-content: space-between; width: 100%;">
-<div style="text-align: left; flex: 1;">BRD and DDR</div>
 </div>
 
