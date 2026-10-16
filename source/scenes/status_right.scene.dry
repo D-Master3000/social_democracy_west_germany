@@ -8,5 +8,8 @@ is-special: true
 <div><img src="img/portraits/dividedGermany.png" alt="BRD and DDR" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <p style="text-align: center;margin-bottom: 0;">WIP</p>
 <p style="text-align: center;margin-bottom: 5px;">WIP</p>
+</div>
 
+<div style="white-space: nowrap; display: flex; justify-content: space-between; width: 100%;">
+<div style="text-align: left; flex: 1;">BRD and DDR</div>
 </div>
