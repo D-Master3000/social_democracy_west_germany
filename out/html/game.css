@@ -255,7 +255,7 @@ blockquote + blockquote.attribution {
     background-color: var(--tab-hover-color);
 }
 
-#scheming_tab {
+#mission_tab {
   display: none;
 }
 
