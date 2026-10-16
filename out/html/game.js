@@ -235,6 +235,14 @@
       $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
   };
 
+  window.updateSidebarRight = function() {
+  $('#qualities_right').empty();
+  var scene = dendryUI.game.scenes[window.statusTabRight];
+    dendryUI.dendryEngine._runActions(scene.onArrival);
+  var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+  $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
+  };
+
   window.changeTab = function(newTab, tabId) {
       if (tabId == 'poll_tab' && dendryUI.dendryEngine.state.qualities.historical_mode) {
           window.alert('Polls are not available in historical mode.');
@@ -248,10 +256,12 @@
       tabButton.className += ' active';
       window.statusTab = newTab;
       window.updateSidebar();
+      window.updateSidebarRight();
   };
 
   window.onDisplayContent = function() {
       window.updateSidebar();
+      window.updateSidebarRight();
   };
 
   /*
