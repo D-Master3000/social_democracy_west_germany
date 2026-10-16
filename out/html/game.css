@@ -255,6 +255,9 @@ blockquote + blockquote.attribution {
     background-color: var(--tab-hover-color);
 }
 
+#scheming_tab {
+  display: none;
+}
 
 .overlay {
     background: rgba(0,0,0,0.7);
