@@ -92,7 +92,7 @@ Q.fdp_leader = "Scheel";
 Q.fdp_ideology = "Left Liberalism";
 // His first name is Adolf, some things never change
 Q.npd_leader = "von Thadden";
-Q.npd_ideology = "Völkish Nationalism";
+Q.npd_ideology = "Völkisch Nationalism";
 
 // Where is the SPD in government?
 Q.spd_bw = 1;
