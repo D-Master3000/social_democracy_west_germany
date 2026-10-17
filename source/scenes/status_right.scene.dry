@@ -6,8 +6,8 @@ is-special: true
 
 <div style="text-align: center;">**Reunification**</div>
 <div><img src="img/dividedGermany.png" alt="BRD and DDR" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<div style="text-align: center;">Status: </div>
-<div style="text-align: center;">DDR Leadership's willingness: </div>
+<div style="text-align: center;">Status: [+ reunification_status : reunification_status +]</div>
+<div style="text-align: center;">DDR Leadership's willingness: [+ ddr_willingness : ddr_willingness +]</div>
 <div style="text-align: center;">Soviet Relations: [+ east_relation : east_relation +]</div>
 <div style="text-align: center;">American Relations: [+ usa_relation : usa_relation +]</div>
 <div style="text-align: center;">French and British Relations: [+ europe_relation : europe_relation +]</div>
