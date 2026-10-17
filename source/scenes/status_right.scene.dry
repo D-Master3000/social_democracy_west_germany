@@ -2,10 +2,10 @@ title: Missions
 new-page: true
 is-special: true
 
-= Missions
+= <div style="text-align: center;">Missions</div>
 
 <div style="text-align: center;">**Reunification**</div>
-<div><img src="img/portraits/dividedGermany.png" alt="BRD and DDR" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
+<div><img src="img/dividedGermany.png" alt="BRD and DDR" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <div style="text-align: center;">Soviet Relations:</div>
 </div>
 
