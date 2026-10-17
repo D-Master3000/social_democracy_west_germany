@@ -566,16 +566,16 @@ table {
     fill: #FFCC00;
 }
 .seat.cdu {
-    fill: #000;
+    fill: #000000;
 }
 .seat.csu {
-    fill: #69A2BE;
+    fill: #286fe0;
 }
 .seat.other {
     fill: #909090;
 }
 .seat.npd {
-    fill: #954B00;
+    fill: #c26f2b;
 }
 .seat.sapd {
     fill: #C40000;
