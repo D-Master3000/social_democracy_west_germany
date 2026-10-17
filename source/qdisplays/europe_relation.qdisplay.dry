@@ -2,5 +2,5 @@
 (..1) <span style="color: #d42f2f;">hostile</span>
 (1..2) <span style="color: #f26d2c;">cold</span>
 (2..3) <span style="color: #f7af52;">neutral</span>
-(3..4) <span style="color: #94f2ba;">warm</span>
+(3..4) <span style="color: #7bc99b;">warm</span>
 (4..) <span style="color: #0dbf55;">friendly</span>
