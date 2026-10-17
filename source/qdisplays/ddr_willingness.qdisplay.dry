@@ -1,0 +1,4 @@
+
+(..1) <span style="color: #d42f2f;">hostile</span>
+(1..2) <span style="color: #f7af52;">hesitant</span>
+(2..) <span style="color: #0dbf55;">open</span>
