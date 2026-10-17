@@ -315,9 +315,9 @@ Q.land_reform = 0;
 Q.works_program = 0;
 Q.wtb_implemented = 0;
 // Relations with the Western countries (France, UK).
-Q.europe_relation = 3;
+Q.europe_relation = 4;
 // Relations with the US
-Q.usa_relation = 3;
+Q.usa_relation = 4;
 // Relations with the Eastern block including Soviets
 Q.east_relation = 0;
 // How much have we exposed the secret rearmament programs?
