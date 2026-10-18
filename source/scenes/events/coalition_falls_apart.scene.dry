@@ -1,0 +1,48 @@
+title: Our coalition partners leave the government!
+subtitle: We have angered our coalition partners too much...
+new-page: true
+on-arrival:
+view-if: spd_in_government = 1 and ((in_grand_coalition = 1 and chancellor_party == "SPD" and coalition_dissent >= 3) or (in_social_liberal_coalition = 1 and coalition_dissent >= 4)) and spd_r < 50
+tags: event
+go-to: vonc_menu
+
+
+= Our coalition partners leave the government!
+
+[? if in_grand_coalition : The <span style="color: #000000;">**CDU**</span>/<span style="color: #286fe0;">**CSU**</span> have ?][? if in_social_liberal_coalition: The <span style="color: #FFCC00;">**FDP**</span> has ?] called for a constructive vote of no confidence against us, due to our various policies and disagreements. If this succeeds, our chancellor will be replaced and we are forced to leave government.
+
+@vonc_menu
+
+- @try_assuage: Try to assuage our partners.
+- @let_it_happen: Let the vote happen.
+
+@try_assuage
+
+How do we assuage our partners?
+
+- @austerity: Enact a massive austerity plan.
+- @resources: Use our resources to reduce dissent within the coalition.
+- @let_it_happen: Never mind. Let the vote happen.
+
+
+@austerity
+view-if: welfare >= 0
+on-arrival: coalition_dissent = 0; workers_spd -= 7; workers_npd += 5; new_left_dissent += 15; democratic_scoialist_dissent += 10; trade_unionist_dissent += 15; pragmatist_dissent += 5; welfare -= 2; budget += 1; economic_growth -= 0.4; inflation -= 0.7;
+
+Fine. We enacted a massive austerity program to cut welfare, in order to maintain the stability of our coalition. The vote has been called off.
+
+@resources
+choose-if: resources >= 3
+unavailable-subtitle: We do not have enough resources.
+subtitle: -3 resources
+on-arrival: resources -= 3; coalition_dissent -= 1;
+
+By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
+
+- @let_it_happen: Never mind. Let the vote happen.
+
+
+@let_it_happen
+on-arrival: chancellor = "Barzel"; chancellor_party = "CDU"; spd_in_government = 0; in_grand_coalition = 0; in_social_liberal_coalition = 0; spd_toleration = 0; foreign_minister_party = "FDP"; foreign_minister = "Genscher"; interior_minister_party = "CDU"; interior_minister = "Benda"; justice_minister_party = "CSU"; justice_minister = "Jaeger"; labor_minister_party = "CDU"; labor_minister = "Katzer"; defense_minister_party = "CDU"; defense_minister = "von Hassel"; economic_minister_party = "CDU"; economic_minister = "Schmücker"; finance_minister_party = "CSU"; finance_minister = "Strauß"; agriculture_minister_party = "CSU"; agriculture_minister = "Höcherl"; coalition_dissent = 0; pro_republic -= 5; self_employed_spd -= 3; white_collar_workers_spd -= 2; workers_spd -= 2 if pro_republic < 50; workers_spd -= 2 if pro_republic < 40; self_employed_npd += 4 if pro_republic < 50; white_collar_workers_npd += 3 if pro_republic < 50
+
+The vote succeeds, and our government has been forced to resign. The <span style="color: #000000;">**CDU**</span>, <span style="color: #286fe0;">**CSU**</span> and <span style="color: #FFCC00;">**FDP**</span> have formed a government under chancellor Barzel.
