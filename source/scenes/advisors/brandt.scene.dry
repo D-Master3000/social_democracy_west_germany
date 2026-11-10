@@ -8,7 +8,7 @@ view-if: brandt_advisor = 1
 = Willy Brandt
 
 
-Brandt is [? if chancellor = "Kiesinger": the Vice ?][? if chancellor = "Brandt": the current ?][? if chancellor = "Schmidt": a former ?] Chancellor and is a long-time Social Democratic leader.
+Brandt is [? if chancellor = "Kiesinger": the Vice ?][? if chancellor = "Brandt": the current ?][? if chancellor = "Schmidt": a former ?] Chancellor and is a long-time <span style="color: #C00000;">Social Democratic</span> leader.
 
 - @relations
 - @party_discipline
@@ -16,8 +16,8 @@ Brandt is [? if chancellor = "Kiesinger": the Vice ?][? if chancellor = "Brandt"
 - @root: Return to main
 
 @relations
-title: Negotiating with the Bourgeois parties
-subtitle: Brandt can improve our relationships with the Bourgeois parties.
+title: Negotiating with the <span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> parties
+subtitle: Brandt can improve our relationships with the <span style="color: #FFCC00;">Bour</span><span style="color: #000000;">geois</span> parties.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; cdu_relation += 5; fdp_relation += 5;
