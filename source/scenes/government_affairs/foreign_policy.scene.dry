@@ -22,19 +22,19 @@ What should our foreign policy priority be?
 - @cancel_advisor_action
 
 @improve_europe
-title: Improve our relations with our European allies.
+title: Improve our relations with our <span style="color: #003399;">European</span> allies.
 on-arrival: europe_relation += 2
 
-The key to peace in Europe is a rapproachment between the allies and Germany. Therefore, we are continuing to improve relations with the rest of Europe.
+The key to peace in Europe is a rapproachment between the allies and Germany. Therefore, we are continuing to improve relations with the rest of <span style="color: #003399;">Europe</span>.
 
 @improve_usa
-title: Improve our relations with the United States.
+title: Improve our relations with the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span>.
 on-arrival: usa_relation += 2
 
-We aim to improve relations with the United States of America.
+We aim to improve relations with the <span style="color: #B31942;">United</span> <span style="color: #0A3161;">States</span> of America.
 
 @improve_east
-title: Improve our relations with our eastern neighbors.
+title: Improve our relations with our <span style="color: #700000;">eastern</span> neighbors.
 on-arrival: east_relation += 1; east_relation += 1 if in_grand_coalition == 0
 
-We aim to improve relations with the DDR and the rest of the eastern block. Hopefully we can convince them of our peaceful intentions. [? if in_grand_coalition : The <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span> support the Hallstein doctrine and will sabotage our efforts. ?]
+We aim to improve relations with the <span style="color: #700000;">DDR</span> and the rest of the <span style="color: #700000;">eastern</span> block. Hopefully we can convince them of our peaceful intentions. [? if in_grand_coalition : The <span style="color: #000000;">**CDU**</span> and <span style="color: #286fe0;">**CSU**</span> support the Hallstein doctrine and will sabotage our efforts. ?]
